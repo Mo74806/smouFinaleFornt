@@ -1,0 +1,66 @@
+.mapAndDetails-card {
+  background-color: #0b344ab6 !important;
+  font-family: Cairo;
+  /* margin-right: 30px; */
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 25px;
+  transition: all 0.5s;
+}
+.mapAndDetails-card:hover {
+  background-color: #0b344a !important;
+  transition: all 0.5s;
+}
+.fa-facebook:hover {
+  color: #3b5998;
+  transition: all 0.5s;
+}
+.fa-instagram:hover {
+  color:  #517fa4;
+  transition: all 0.5s;
+}
+
+.fa-twitter:hover {
+  color:  #00aced;
+  transition: all 0.5s;
+}
+.mapAndDetails-img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.mapAndDetails-details-info {
+  background-image: url("../../../public/imgs/header.jpg");
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.mapAndDetails-map {
+  border-radius: 10px;
+}
+.mapAndDetails-map {
+  height: 300px !important;
+}
+
+/* * {
+  border: 1px solid red;
+} */
+.mapAndDetails-text-sm {
+  font-size: 0.7rem;
+}
+
+
+
+.mapAndDetails-card-dark {
+  background-color: rgba(1,1,1,0.8) !important;
+  font-family: Cairo;
+  /* margin-right: 30px; */
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 25px;
+  transition: all 0.5s;
+}
+.mapAndDetails-card-dark:hover {
+  background-color: black !important;
+  transition: all 0.5s;
+}

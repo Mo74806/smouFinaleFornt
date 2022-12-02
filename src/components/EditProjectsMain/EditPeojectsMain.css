@@ -1,0 +1,9 @@
+.editRef {
+  cursor: pointer;
+}
+.setLines {
+  max-lines: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

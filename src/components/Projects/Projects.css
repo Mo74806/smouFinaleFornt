@@ -1,0 +1,60 @@
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5% !important;
+}
+#project-carousel .carousel-indicators {
+  display: none;
+}
+.projects.active {
+  background-color: #ddd;
+}
+.values-title h2 {
+  color: #27355a;
+}
+.values-title h2::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 50px;
+  background-color: var(--second-color);
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.projects .project-card .image-container {
+  border-radius: 25px;
+  overflow: hidden;
+  max-height: 70vh;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.projects .project-card .image-container img {
+  width: 100%;
+  transform: scale(1.3);
+  transition: transform ease-out 0.7s;
+  transform-origin: 0 0;
+}
+.projects .project-card .image-container img:hover {
+  transform: scale(1.1) translateY(-8%);
+}
+.projects .project-card .text-container {
+  background-color: #27355a;
+  color: #aaa;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.projects .project-card .text-container p {
+  font-size: 14px;
+}
+.projects .text-container-btns a button {
+  border: none;
+  white-space: nowrap;
+  border-radius: 10px;
+  transition: all ease-in-out 0.2s;
+}
+.projects .text-container-btns a button:hover {
+  background-color: var(--gold-color);
+}

@@ -1,0 +1,94 @@
+.contact-form-form-body {
+  background-color: #0b344ab6;
+  border-radius: 5px;
+
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 50px 0px;
+}
+.contact-form-form-body:hover {
+  background-color: #0b344a;
+  transition: all 0.5s;
+}
+.contact-form-form-body:enabled {
+  background-color: #0b344a;
+}
+.contact-form-form-section {
+  font-family: Cairo;
+  width: 100%;
+  margin-top: 0;
+  background-image: url("../../../public/imgs/ralph-ravi-kayden-zSG-kd-L6vw-unsplash.jpg");
+
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+.contact-form-shapes {
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact-form-form-section input {
+  height: 2.5rem;
+}
+.contact-form-form-section input,
+.contact-form-form-section textarea {
+  background: none;
+  width: 100%;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+}
+.contact-form-form-section input::placeholder,
+.contact-form-form-section textarea::placeholder {
+  color: rgba(255, 255, 255, 0.648);
+  padding: 15px;
+  font-size: 0.8rem;
+}
+.contact-form-form-section button {
+  height: 2.6rem;
+  padding: 5px;
+  background-color: #1d709d;
+  font-weight: bolder;
+  border: 0px;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  color: white;
+  transition: all 0.5s;
+}
+.contact-form-form-section button:hover {
+  background-color: #0b344a;
+  transition: all 0.5s;
+}
+/* * {
+  border: 1px red solid;
+} */
+
+
+.contact-form-form-body-dark {
+  background-color:rgba(1,1,1,0.6);
+  border-radius: 5px;
+
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  padding: 50px 0px;
+}
+.contact-form-form-body-dark:hover {
+  background-color: black;
+  transition: all 0.5s;
+}
+.contact-form-form-body-dark:enabled {
+  background-color: #0b344a;
+}
+
+
+.contact-form-form-body-dark button{
+  background-color:  var(--second-color) ;
+  transition: all 0.5s;
+}
+
+
+.contact-form-form-body-dark button:hover{
+  background-color: white ;
+  color:black !important;
+  transition: all 0.5s;
+}

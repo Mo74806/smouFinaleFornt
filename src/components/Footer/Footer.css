@@ -1,0 +1,45 @@
+footer {
+  border-top: 2px solid var(--gold-color);
+  font-family: var(--lg-font);
+  background-color: #0B3045;
+}
+
+.footer-logo {
+  width: 60%;
+}
+.address-map iframe {
+  width: 100%;
+  height: 100px;
+  border-radius: 20px;
+  opacity: 0.7;
+}
+.footer-text {
+  color: #aaa;
+}
+footer p {
+  font-size: 13px;
+}
+span {
+  font-size: 15px;
+}
+footer h5 {
+  font-weight: 800;
+}
+.footer-icon {
+  color: var(--gold-color);
+}
+.social-icon a i:hover {
+  color: #fff;
+  transition: all ease-out 0.3s;
+}
+
+.footer-main {
+  direction: ltr;
+}
+.footer-main2 {
+  direction: rtl;
+}
+#footer-admin:hover {
+  cursor: pointer;
+  color: #fff;
+}

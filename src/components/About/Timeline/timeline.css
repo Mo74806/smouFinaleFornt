@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap");
+* {
+  font-family: "Cairo", sans-serif;
+}
+
+.timeline-steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.timeline-steps .timeline-step {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 1rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-steps .timeline-step:not(:last-child):after {
+    content: "";
+    display: block;
+    border-top: 0.25rem dotted #256d85;
+    width: 3.46rem;
+    position: absolute;
+    left: 7.5rem;
+    top: 0.3125rem;
+  }
+  .timeline-steps .timeline-step:not(:first-child):before {
+    content: "";
+    display: block;
+    border-top: 0.25rem dotted #8e7e71;
+    width: 3.8125rem;
+    position: absolute;
+    right: 7.5rem;
+    top: 0.3125rem;
+  }
+  .p {
+    position: absolute;
+    max-height: 400px;
+    width: 400px;
+    top: 70px;
+    right: 200px;
+    font-size: 10px;
+  }
+}
+
+.timeline-steps .timeline-content {
+  width: 10rem;
+  text-align: center;
+}
+
+.timeline-steps .timeline-content .inner-circle {
+  border-radius: 1.5rem;
+  height: 1rem;
+  width: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #256d85;
+}
+
+.timeline-steps .timeline-content .inner-circle:before {
+  content: "";
+  background-color: transparent;
+  border: 1px solid #256d85;
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  min-width: 3rem;
+  border-radius: 6.25rem;
+  opacity: 0.5;
+}
+
+.h6 {
+  font-family: "Cairo", sans-serif;
+  color: #1d709d;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.text-muted {
+  color: #8e7e71;
+}
+
+.timeline-steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.timeline-steps .arb {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 1rem;
+}
+
+.timeline-steps .timeline-content {
+  width: 10rem;
+  text-align: center;
+}
+
+.timeline-steps .timeline-content .inner-circle {
+  border-radius: 1.5rem;
+  height: 1rem;
+  width: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3b82f6;
+}
+
+.timeline-steps .timeline-content .inner-circle:before {
+  content: "";
+  background-color: #8e7e71;
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  min-width: 3rem;
+  border-radius: 6.25rem;
+  opacity: 0.5;
+}
+
+#h2 {
+  font-family: "Cairo", sans-serif;
+  color: #1d709d;
+  font-weight: 500;
+
+  font-size: 50px;
+  margin-top: 40px;
+}
+.h6 {
+  font-family: "Cairo", sans-serif;
+  color: #1d709d;
+  font-weight: 700 !important;
+  font-size: 20px;
+}
+.time_img {
+  height: 40px;
+  width: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.p_Time {
+  margin-left: 300px;
+  max-width: 500px;
+  max-height: 400px;
+  font-size: 35px;
+  margin-top: 25px;
+  color: #8e7e71;
+  font-weight: 400;
+}
+.text-muted {
+  color: #8e7e71;
+}
+
+.timeline-steps .arb:not(:first-child):before {
+  content: "";
+  display: flex;
+  border-top: 0.2rem dotted #8e7e71;
+  width: 9rem;
+  position: absolute;
+  right: 6.44rem;
+  top: 0.3125rem;
+}
+
+.timeline-steps .eng:not(:first-child):after {
+  content: "";
+  display: flex;
+  border-top: 0.2rem dotted #3b82f6;
+  width: 8.8rem;
+  position: absolute;
+  left: 6.44rem;
+  top: 0.3125rem;
+}
+#h6e {
+  color: #6ec1ee !important;
+}
+#h6n {
+  color: white !important;
+  font-size: 20px !important;
+}
+@media (max-width: 1024px) {
+  .timeline-steps .timeline-step:not(:last-child):after {
+    content: "";
+    display: block;
+    border-top: 0.25rem dotted #256d85;
+    width: 0;
+    position: absolute;
+    left: 7.5rem;
+    top: 0.3125rem;
+  }
+  .timeline-steps .timeline-step:not(:first-child):before {
+    content: "";
+    display: block;
+    border-top: 0.25rem dotted #3b82f6;
+    width: 0;
+    position: absolute;
+    right: 7.5rem;
+    top: 0.3125rem;
+  }
+  .p_Time {
+    max-height: 200px;
+    width: 100% !important;
+    top: 70px;
+    right: 0px;
+    margin: 0;
+    font-size: 20px !important;
+  }
+  #h2 {
+    font-size: 30px;
+    margin: 10px;
+  }
+  .container {
+    overflow: hidden;
+  }
+  .timeline-steps .eng:not(:first-child):after {
+    content: "";
+    display: flex;
+    border-top: 0.2rem dotted #8e7e71;
+    width: 0;
+    position: absolute;
+    left: 6.44rem;
+    top: 0.3125rem;
+  }
+  .timeline-steps {
+    flex-direction: column-reverse;
+  }
+}

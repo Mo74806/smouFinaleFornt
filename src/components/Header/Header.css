@@ -1,0 +1,59 @@
+.contact-header-image {
+  font-family: Cairo;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+height:600px;
+z-index:0;
+position: absolute;
+width:100%;
+overflow:hidden;
+}
+
+
+
+.mask{
+
+
+z-index:1;}
+.contact-header--title--text {
+z-index:500;
+  background-color: #0b344ab6;
+  font-size: 3rem;
+  color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  transition: all 0.5s;
+}
+
+.contact-header--title--text:hover {
+  background-color: #0b344a;
+
+  transition: all 0.5s;
+}
+.contact-header--title--text p {
+  font-size: 1rem;
+  color: white;
+}
+
+
+
+.contact-header--title--text-dark {
+z-index:500;
+   background-color:rgba(1,1,1,0.8);
+  font-size: 3rem;
+  color: white ;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  transition: all 0.5s;
+}
+
+.contact-header--title--text-dark:hover {
+  background-color:black;
+
+  transition: all 0.5s;
+}
+.contact-header--title--text-dark p {
+  font-size: 1rem;
+  color: white;
+}

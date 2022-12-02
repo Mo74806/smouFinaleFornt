@@ -1,0 +1,8 @@
+.homeWidgets {
+  display: flex;
+  margin: 20px;
+}
+
+.containerAdmin {
+  max-width: 100vw;
+}

@@ -1,0 +1,30 @@
+.star {
+  position: absolute;
+  top: 5%;
+  left: 80%;
+}
+
+/* .btn-outline-danger1 {
+  border: 1px solid rgb(97, 0, 0) !important;
+  color: rgb(97, 0, 0) !important;
+  background-color: transparent !important;
+}
+.btn-outline-danger1:hover {
+  border: 1px solid rgb(97, 0, 0) !important;
+  background-color: rgb(97, 0, 0) !important;
+  color: rgb(255, 255, 255) !important;
+}
+.btn-outline-warning1 {
+  border: 1px solid rgb(251, 255, 0) !important;
+  color: rgb(251, 255, 0) !important;
+  background-color: transparent !important;
+}
+.btn-outline-warning1:hover {
+  border: 1px solid rgb(251, 255, 0) !important;
+  background-color: rgb(251, 255, 0) !important;
+  color: rgb(255, 255, 255) !important;
+} */
+
+.bg-comment {
+  background-color: rgb(29, 112, 157) !important;
+}
