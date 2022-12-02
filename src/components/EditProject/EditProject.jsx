@@ -108,13 +108,11 @@ export default function EditProject() {
     //     if (editDataUnits[j][i]) {
     //       if ("name" in editDataUnits[j][i]) {
     //         unitForm.append("unitName", editDataUnits[j][i].name);
-    //         console.log("name true========++++");
-    //         console.log(editDataUnits[j][i].name);
+    //
     //       }
     //       if ("description" in editDataUnits[j][i]) {
     //         unitForm.append("unitDescription", editDataUnits[j][i].description);
-    //         console.log("desc true========++++");
-    //         console.log(editDataUnits[j][i].description);
+    //
     //       }
     //       if ("imageCover" in editDataUnits[j][i]) {
     //         unitForm.append(
@@ -128,7 +126,6 @@ export default function EditProject() {
     //           `http://localhost:3030/api/v1/projects/updateUnit/${id}/${editDataUnits[j][i].unitId}`,
     //           unitForm
     //         )
-    //         .then((res) => console.log(res));
     //     }
     //   }
     // }
@@ -164,7 +161,6 @@ export default function EditProject() {
         error: "error occurred please try again later",
       }
     );
-    // console.log(res);
   };
   return (
     <>

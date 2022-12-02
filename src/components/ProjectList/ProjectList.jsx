@@ -42,7 +42,6 @@ const ProjectList = ({ sort, filter }) => {
   }, [page, filter]);
 
   // FILTERS HANDLING
-  console.log(projects);
   useEffect(() => {
     if (filter.locationEN === "all") {
       setFilteredProjects(projects);
@@ -57,19 +56,16 @@ const ProjectList = ({ sort, filter }) => {
       );
     }
   }, [projects, filter, sort]);
-  console.log(filter);
 
   // SORT HANDLING
 
   useEffect(() => {
     if (sort === "newest") {
       setFilteredProjects((prev) => prev && [...prev].reverse());
-      console.log(filteredProjects);
     } else {
       setFilteredProjects((prev) => prev && [...prev]);
     }
-    console.log(filteredProjects.length);
-    console.log(Math.ceil(filteredProjects.length / 6));
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sort]);
 

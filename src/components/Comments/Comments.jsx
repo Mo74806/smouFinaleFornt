@@ -10,9 +10,7 @@ export default function Comments() {
   const dispatch = useDispatch();
 
   const { messages } = useSelector((state) => state.messages);
-  // console.log(status);
-  // console.log(messages);
-  console.log(messages);
+
   const [comments, setComment] = useState(null);
   const [commentsDisp, setCommentDisp] = useState(null);
   useEffect(() => {
@@ -34,7 +32,6 @@ export default function Comments() {
   };
   const starComment = async (index, id) => {
     // let newArr = [...comments];
-    // console.log(newArr);
     if (comments[index].stared === "false") {
       // newArr[index].stared = "true";
       const res = await userRequest
@@ -71,7 +68,6 @@ export default function Comments() {
         setComment(newArr);
         setCommentDisp(newArr);
       });
-    console.log(res);
   };
   return (
     <>

@@ -15,7 +15,6 @@ export default function MainSliderEdit({ values, changeHandlerParent }) {
         { imageName: image }
       )
       .then((res) => {
-        console.log(res);
         var newData = data.filter((item) => item !== image);
         setData(newData);
       });

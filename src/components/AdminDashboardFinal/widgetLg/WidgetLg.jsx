@@ -33,10 +33,8 @@ export default function WidgetLg() {
   // appointments &&
   //   appointments.dayAppointements.forEach((appointment) =>
   //     dispatch(getUserById([appointment.user, jwt])).then((res) =>
-  //       console.log(res.payload)
   //     )
   //   );
-  console.log(userList);
 
   const Button = ({ type }) => {
     return <button className={"widgetLgButton " + type}>{type}</button>;

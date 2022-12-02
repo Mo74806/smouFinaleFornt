@@ -25,39 +25,32 @@ export default function ProjectDetails() {
   }, []);
 
   const handleDownload = () => {
-    console.log("in download");
-    const res = axios
-      .patch(
-        `http://localhost:3030/api/v1/projects/increaseParsureDownloads/${project._id}`
-      )
-      .then((resp) => console.log(resp));
+    const res = axios.patch(
+      `http://localhost:3030/api/v1/projects/increaseParsureDownloads/${project._id}`
+    );
   };
 
   return (
-
-  
     <>
-    
-              {isLoading && <Loading />}
-              {project&&
-     <Header title= {lang === "english"
-                      ? project.nameEN
-                      : project.name}        cover={project.imageCover[1]}/>}
+      {isLoading && <Loading />}
+      {project && (
+        <Header
+          title={lang === "english" ? project.nameEN : project.name}
+          cover={project.imageCover[1]}
+        />
+      )}
       <div className=" ">
-      
-
         {serverError && (
           <div className="alert alert-danger">{`${serverError} .. Please try again later`}</div>
         )}
 
         {/* yasser slider */}
 
-        <div className="py-5 swiper-bg" >
-        <div className="text-center text-white fs-1 fw-bold">
-        شاهد أخر التطورات
-        </div>
+        <div className="py-5 swiper-bg">
+          <div className="text-center text-white fs-1 fw-bold">
+            شاهد أخر التطورات
+          </div>
           <Swiper
-
             modules={[Pagination, Navigation, Autoplay, EffectCoverflow]}
             navigation
             pagination={{ clickable: true }}
@@ -91,7 +84,11 @@ export default function ProjectDetails() {
             {project &&
               project.imageCover.map((img) => (
                 <SwiperSlide className="my-5 images-slider">
-                  <img className="w-100 rounded-4 " src={`${img}`} alt="cover" />
+                  <img
+                    className="w-100 rounded-4 "
+                    src={`${img}`}
+                    alt="cover"
+                  />
                 </SwiperSlide>
               ))}
           </Swiper>
@@ -99,203 +96,222 @@ export default function ProjectDetails() {
 
         {/* end yasser slider */}
         <div className="container my-5">
-        <div className="row my-5 d-flex justify-content-around">
-
-          <div className={`col-md-5   "`}>
-            <iframe
-              src={project && project.videos}
-              title="Park View بارك فيو الخبر"
-              // frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              // allowFullScreen
-              className="rounded-2"
-            ></iframe>
-          </div>
-            <div className={`col-md-5  ${dark?'contact-form-form-body-dark':'contact-form-form-body'} my-3"`}>
-            <div className="">
-              <div className="">
-                {project && (
-                  <p className="card-text text-center text-light fs-6 fw-semibold px-2">
-                    {lang === "english"
-                      ? project.descriptionEN
-                      : project.description}
-                  </p>
-                )}
-              </div>
+          <div className="row my-5 d-flex justify-content-around">
+            <div className={`col-md-5   "`}>
+              <iframe
+                src={project && project.videos}
+                title="Park View بارك فيو الخبر"
+                // frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                // allowFullScreen
+                className="rounded-2"
+              ></iframe>
             </div>
+            <div
+              className={`col-md-5  ${
+                dark ? "contact-form-form-body-dark" : "contact-form-form-body"
+              } my-3"`}
+            >
+              <div className="">
+                <div className="">
+                  {project && (
+                    <p className="card-text text-center text-light fs-6 fw-semibold px-2">
+                      {lang === "english"
+                        ? project.descriptionEN
+                        : project.description}
+                    </p>
+                  )}
+                </div>
+              </div>
             </div>
           </div>
         </div>
         {/* <!-- slider 2 --> */}
-                <div className="py-5 images-bg">
-        <div className="py-5 container">
-        <div className="row my-5">
-          <div className="col-md-6 my-3  ">
-            <h3
-              className={`text-center mb-5 fw-bold text-white `}
-            >
-              {lang === "english" ? "Plan view" : "منظر علوي"}
-            </h3>
-            <div
-              id="carouselExampleInterval"
-              className="carousel carousel-fade"
-              data-bs-ride="carousel"
-            >
-              <div className="carousel-inner">
-                <div className="carousel-item active" data-bs-interval="5000">
-                  <img
-                    src={`${project && project.imagePlan[0]}`}
-                    className="d-block w-100 image-project"
-                    alt="..."
-                  />
-                </div>
-                {project &&
-                  project.imagePlan
-                    .filter((img, index) => index > 0)
-                    .map((item) => {
-                      return (
-                        <div className="carousel-item  " data-bs-interval="5000">
-                          <img
-                            src={`${item}`}
-                            className="d-block w-100  image-project "
-                            alt="..."
-                          />
-                        </div>
-                      );
-                    })}
-              </div>
-              <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev"
-              >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next"
-              >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-
-          <div className="col-md-6 mt-3">
-            <h3
-              className="text-center mb-5 fw-bold text-white"
-            >
-              {lang === "english" ? "Services" : "الخدمات"}
-            </h3>
-            <div
-              id="slider2"
-              className="carousel carousel-fade"
-              data-bs-ride="carousel"
-            >
-              <div className="carousel-inner">
-                <div className="carousel-item active" data-bs-interval="6000">
-                  <img
-                    src={`${project && project.imageService[0]}`}
-                    className="d-block w-100 image-project"
-                    alt="..."
-                  />
-                </div>
-                {project &&
-                  project.imageService
-                    .filter((img, index) => index > 0)
-                    .map((item) => (
-                      <div className="carousel-item">
-                        <img
-                          src={`${item}`}
-                          className="d-block w-100 image-project"
-                          alt="..."
-                        />
-                      </div>
-                    ))}
-              </div>
-              <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target="#slider2"
-                data-bs-slide="prev"
-              >
-                <span
-                  className="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target="#slider2"
-                data-bs-slide="next"
-              >
-                <span
-                  className="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span className="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        </div>
-        </div>
-        {/* <!-- slider 2 -->
-        <!-- units --> */}
-        
-        <div className="">
-        <div className="container">
-        
-        <h3
-          className={`text-center mt-5 fw-bolder fs-1 mb-5 ${
-            dark ? "text-customDark" : "text-custom"
-          }`}
-        >
-          {lang === "english" ? "Units types" : "أنواع الوحدات"}
-        </h3>
-        <div className="row d-flex justify-content-center">
-          {project &&
-            project.housingUnits &&
-            project &&
-            project.housingUnits.map((item) => {
-              return (
-                <>
-                  <div className="card  px-0 mx-2 rounded-5 col-xl-5 col-10 bg-transparent mb-3">
-                    <div className="">
+        <div className="py-5 images-bg">
+          <div className="py-5 container">
+            <div className="row my-5">
+              <div className="col-md-6 my-3  ">
+                <h3 className={`text-center mb-5 fw-bold text-white `}>
+                  {lang === "english" ? "Plan view" : "منظر علوي"}
+                </h3>
+                <div
+                  id="carouselExampleInterval"
+                  className="carousel carousel-fade"
+                  data-bs-ride="carousel"
+                >
+                  <div className="carousel-inner">
+                    <div
+                      className="carousel-item active"
+                      data-bs-interval="5000"
+                    >
                       <img
-                        src={`${item.imageCover}`}
-                        className="card-img-top "
+                        src={`${project && project.imagePlan[0]}`}
+                        className="d-block w-100 image-project"
                         alt="..."
                       />
                     </div>
-                    <div className={`card-body rounded-0 `}>
-                      <h5 className={`card-title  fw-bold fs-1 ${dark?'contact-form-form-body-dark bg-black':'contact-form-form-body'}  text-center text-light`}>
-                        {lang === "english" ? item.nameEN : item.name}
-                      </h5>
-                      <p className={`card-text text-center px-4 ${dark?'contact-form-form-body-dark':'contact-form-form-body'} text-light text-center`}>
-                        {lang === "english"
-                          ? item.descriptionEN
-                          : item.description}
-                      </p>
-                    </div>
+                    {project &&
+                      project.imagePlan
+                        .filter((img, index) => index > 0)
+                        .map((item) => {
+                          return (
+                            <div
+                              className="carousel-item  "
+                              data-bs-interval="5000"
+                            >
+                              <img
+                                src={`${item}`}
+                                className="d-block w-100  image-project "
+                                alt="..."
+                              />
+                            </div>
+                          );
+                        })}
                   </div>
-                </>
-              );
-            })}
+                  <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      className="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      className="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span className="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="col-md-6 mt-3">
+                <h3 className="text-center mb-5 fw-bold text-white">
+                  {lang === "english" ? "Services" : "الخدمات"}
+                </h3>
+                <div
+                  id="slider2"
+                  className="carousel carousel-fade"
+                  data-bs-ride="carousel"
+                >
+                  <div className="carousel-inner">
+                    <div
+                      className="carousel-item active"
+                      data-bs-interval="6000"
+                    >
+                      <img
+                        src={`${project && project.imageService[0]}`}
+                        className="d-block w-100 image-project"
+                        alt="..."
+                      />
+                    </div>
+                    {project &&
+                      project.imageService
+                        .filter((img, index) => index > 0)
+                        .map((item) => (
+                          <div className="carousel-item">
+                            <img
+                              src={`${item}`}
+                              className="d-block w-100 image-project"
+                              alt="..."
+                            />
+                          </div>
+                        ))}
+                  </div>
+                  <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#slider2"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      className="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target="#slider2"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      className="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span className="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        </div>
+        {/* <!-- slider 2 -->
+        <!-- units --> */}
+
+        <div className="">
+          <div className="container">
+            <h3
+              className={`text-center mt-5 fw-bolder fs-1 mb-5 ${
+                dark ? "text-customDark" : "text-custom"
+              }`}
+            >
+              {lang === "english" ? "Units types" : "أنواع الوحدات"}
+            </h3>
+            <div className="row d-flex justify-content-center">
+              {project &&
+                project.housingUnits &&
+                project &&
+                project.housingUnits.map((item) => {
+                  return (
+                    <>
+                      <div className="card  px-0 mx-2 rounded-5 col-xl-5 col-10 bg-transparent mb-3">
+                        <div className="">
+                          <img
+                            src={`${item.imageCover}`}
+                            className="card-img-top "
+                            alt="..."
+                          />
+                        </div>
+                        <div className={`card-body rounded-0 `}>
+                          <h5
+                            className={`card-title  fw-bold fs-1 ${
+                              dark
+                                ? "contact-form-form-body-dark bg-black"
+                                : "contact-form-form-body"
+                            }  text-center text-light`}
+                          >
+                            {lang === "english" ? item.nameEN : item.name}
+                          </h5>
+                          <p
+                            className={`card-text text-center px-4 ${
+                              dark
+                                ? "contact-form-form-body-dark"
+                                : "contact-form-form-body"
+                            } text-light text-center`}
+                          >
+                            {lang === "english"
+                              ? item.descriptionEN
+                              : item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </>
+                  );
+                })}
+            </div>
+          </div>
         </div>
 
         {/* document download */}

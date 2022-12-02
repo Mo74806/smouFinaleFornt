@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function ContactForm() {
-    const { dark } = useSelector((state) => state.dark);
+  const { dark } = useSelector((state) => state.dark);
   const { lang } = useSelector((state) => state.language);
   const [form, setForm] = useState({
     name: "",
@@ -28,13 +28,11 @@ export default function ContactForm() {
   let handleAdd = async (e) => {
     e.preventDefault();
 
-    console.log(form);
     const response = await axios.post(
       "http://localhost:3030/api/v1/contacts",
       form
     );
-    // console.log(response);
-    // console.log("added");
+
     let msg = "تم تسجيل استفسارك بنجاح";
     if (lang === "english") {
       msg = "Your enquiry submitet successfuly";
@@ -43,7 +41,6 @@ export default function ContactForm() {
     }
     toast.success(msg);
     window.location.reload(false);
-    console.log(response);
     setForm("");
   };
   let handleChange = (e) => {
@@ -54,14 +51,12 @@ export default function ContactForm() {
     if (e.target.name === "name") {
       if (e.target.value.length <= 3)
         setError((p) => {
-          console.log(p);
           return lang === "english"
             ? { ...p, [e.target.name]: "Name must be at least 3 characters" }
             : { ...p, [e.target.name]: "يجب أن يكون أسمك أكثر من 3 حروف" };
         });
       else {
         setError((p) => {
-          console.log(p);
           return { ...p, [e.target.name]: null };
         });
       }
@@ -69,7 +64,6 @@ export default function ContactForm() {
     if (e.target.name === "phone") {
       if (e.target.value.length <= 10) {
         setError((p) => {
-          console.log(p);
           return lang === "english"
             ? {
                 ...p,
@@ -82,7 +76,6 @@ export default function ContactForm() {
         });
       } else {
         setError((p) => {
-          console.log(p);
           return { ...p, [e.target.name]: null };
         });
       }
@@ -95,7 +88,6 @@ export default function ContactForm() {
       );
       if (!emailRegex.test(e.target.value)) {
         setError((p) => {
-          console.log(p);
           return lang === "english"
             ? {
                 ...p,
@@ -108,7 +100,6 @@ export default function ContactForm() {
         });
       } else {
         setError((p) => {
-          console.log(p);
           return { ...p, [e.target.name]: null };
         });
       }
@@ -116,7 +107,6 @@ export default function ContactForm() {
     if (e.target.name === "message") {
       if (e.target.value.length <= 0) {
         setError((p) => {
-          console.log(p);
           return lang === "english"
             ? {
                 ...p,
@@ -129,7 +119,6 @@ export default function ContactForm() {
         });
       } else {
         setError((p) => {
-          console.log(p);
           return { ...p, [e.target.name]: null };
         });
       }
@@ -148,7 +137,13 @@ export default function ContactForm() {
         <div className="container m-0 row">
           <form action="" className="row m-0 ">
             <div className="row d-flex  justify-content-lg-start justify-content-center m-0 mx-lg-5   mx-auto mx-lg-0  py-5">
-              <div className={`col-12 ${dark?'contact-form-form-body-dark':'contact-form-form-body'} col-lg-4  px-2 text-center `}>
+              <div
+                className={`col-12 ${
+                  dark
+                    ? "contact-form-form-body-dark"
+                    : "contact-form-form-body"
+                } col-lg-4  px-2 text-center `}
+              >
                 <h3
                   className={
                     lang === "english"
@@ -233,13 +228,12 @@ export default function ContactForm() {
                   <button className=" my-2 col-7" onClick={handleAdd}>
                     {lang === "english" ? "Send" : "إرسال"}
                   </button>
-                   <Link className="" to="/appointment">
-                  <button className="col-7 my-2 border border-0">
-                    {lang === "english" ? "Book appointment" : "احجز موعد"}
-                  </button>
-                </Link>
+                  <Link className="" to="/appointment">
+                    <button className="col-7 my-2 border border-0">
+                      {lang === "english" ? "Book appointment" : "احجز موعد"}
+                    </button>
+                  </Link>
                 </div>
-               
               </div>
             </div>
           </form>

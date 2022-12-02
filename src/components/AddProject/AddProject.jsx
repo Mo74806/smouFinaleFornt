@@ -89,7 +89,6 @@ export default function AddProject() {
 
   // Submit Function to add project
   const addNewProject = async (e) => {
-    console.log(error);
 
     if (
       error.planSlider ||
@@ -103,9 +102,7 @@ export default function AddProject() {
       error.videos
     ) {
       e.preventDefault();
-      console.log(formValues);
     } else {
-      console.log(formValues);
       e.preventDefault();
       const formData = new FormData();
       for (let i = 0; i < formValues.sliderImgs.length; i++) {
@@ -122,7 +119,6 @@ export default function AddProject() {
           formValues.servicesSlider[i].name
         );
       }
-      console.log(formValues.sliderImgs);
       for (let i = 0; i < formValues.planSlider.length; i++) {
         formData.append(
           "imagePlan",
@@ -130,7 +126,6 @@ export default function AddProject() {
           formValues.planSlider[i].name
         );
       }
-      console.log(formValues.housingUnits);
       for (let i = 0; i < formValues.housingUnits.length; i++) {
         formData.append(
           "unitCover",
@@ -153,8 +148,7 @@ export default function AddProject() {
         );
       }
       // const res = await userRequest.get("http://localhost:3030/api/v1/projects");
-      console.log(formValues.parsure[0]);
-      console.log(formValues.parsure[0].name);
+
       formData.append("name", formValues.name);
       formData.append("nameEN", formValues.nameEN);
       formData.append("description", formValues.description);
@@ -167,7 +161,6 @@ export default function AddProject() {
         formValues.parsure[0].name
       );
       formData.append("housingUnits", formValues.housingUnits);
-      console.log(formValues.housingUnits);
       const res = await toast.promise(
         userRequest
           .post("http://localhost:3030/api/v1/projects", formData)
@@ -184,13 +177,10 @@ export default function AddProject() {
   };
   // Handeler fucntion to add units to form state
   const unitHandler = (e, i) => {
-    console.log(e.target.files);
-    console.log(e.target.name);
-    // console.log(i);
+
     let newArr = [...formValues.housingUnits];
     if (e.target.name === "unitImg") {
       newArr[i] = { ...newArr[i], [e.target.name]: [...e.target.files] };
-      console.log(newArr);
     } else {
       newArr[i] = { ...newArr[i], [e.target.name]: e.target.value };
     }

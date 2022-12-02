@@ -29,7 +29,6 @@ export default function AppointementForm() {
   window.addEventListener("storage", function () {
     setLogged(JSON.parse(localStorage.getItem("isLoggedIn")));
   });
-  console.log(logged);
 
   let handleDelete = async () => {
     const jwt = localStorage.getItem("jwt");
@@ -43,10 +42,8 @@ export default function AppointementForm() {
   let getAppointement = async () => {
     let id = localStorage.getItem("app");
 
-    console.log(id);
     let localUser = JSON.parse(localStorage.getItem("user"));
     if (localUser) {
-      console.log(localUser);
       const jwt = localStorage.getItem("jwt");
 
       const response1 = await axios.get(
@@ -54,23 +51,16 @@ export default function AppointementForm() {
         { headers: { jwt } }
       );
 
-      console.log(response1);
       setapp(response1.data.data.appointement);
     }
-    console.log("******************");
-    console.log(appointement);
   };
 
   useEffect(() => {
     getAppointement();
   }, [user]);
-  useEffect(() => {
-    console.log(freeHoursResponse.data);
-  }, [freeHoursResponse]);
+  useEffect(() => {}, [freeHoursResponse]);
 
-  useEffect(() => {
-    console.log(freeHoursResponse.data);
-  }, [freeHoursResponse]);
+  useEffect(() => {}, [freeHoursResponse]);
 
   let handleShow = async () => {
     if (form.day) {
@@ -79,7 +69,6 @@ export default function AppointementForm() {
         `http://localhost:3030/api/v1/appointements/free/${form.day}`,
         { headers: { jwt } }
       );
-      console.log(response.data.message);
       if (
         response.data.message == "this is a dayoff " ||
         response.data.message == "select valid date "
@@ -111,11 +100,6 @@ export default function AppointementForm() {
         //edit set user appointement in slice
         setapp({ ...response.data.data.appointement });
         localStorage.setItem("app", response.data.data.appointement._id);
-
-        console.log(appointement);
-        console.log(response);
-
-        console.log("added");
       })
       .catch((e) => {
         if (e.response.data.message.startsWith("E11000 duplicate key")) {

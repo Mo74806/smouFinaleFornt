@@ -21,7 +21,6 @@ export default function Appointments() {
         setUsersList(res.data.data.users);
       });
   }, []);
-  console.log(usersList);
 
   const handleDelete = (id) => {
     const res = userRequest
@@ -39,7 +38,6 @@ export default function Appointments() {
       .then((res) => {
         let newApp = [...appoint];
         // newApp[id] = { ...newApp[id], confirm: true };
-        // console.log(newApp[id])
         appoint.map((item, index) => {
           if (item.id === id) {
             newApp[index].confirm = true;
@@ -52,7 +50,6 @@ export default function Appointments() {
   //   const appUserList = usersList.filter((item) => {
   //     return "appointements" in item;
   //   });
-  //   console.log(appUserList);
 
   const columns = [
     {
@@ -65,8 +62,7 @@ export default function Appointments() {
           usersList.filter((item) => {
             return item._id === params.row.user;
           });
-        // console.log(`filtered true : ${user}`);
-        // console.log(user);
+
         return <div className="userListUser">{user && user[0].userName}</div>;
       },
     },
@@ -80,8 +76,6 @@ export default function Appointments() {
           usersList.filter((item) => {
             return item._id === params.row.user;
           });
-        // console.log(`filtered true : ${user}`);
-        // console.log(user);
 
         return <div className="userListUser">{user && user[0].firstName}</div>;
       },
@@ -96,8 +90,6 @@ export default function Appointments() {
           usersList.filter((item) => {
             return item._id === params.row.user;
           });
-        // console.log(`filtered true : ${user}`);
-        // console.log(user);
 
         return <div className="userListUser">{user && user[0].lastName}</div>;
       },
@@ -112,8 +104,7 @@ export default function Appointments() {
           usersList.filter((item) => {
             return item._id === params.row.user;
           });
-        // console.log(`filtered true : ${user}`);
-        // console.log(user);
+
         return <div className="userListUser">{user && user[0].email}</div>;
       },
     },
@@ -162,9 +153,6 @@ export default function Appointments() {
       },
     },
   ];
-
-  console.log(appoint);
-  console.log(usersList);
 
   return (
     <>

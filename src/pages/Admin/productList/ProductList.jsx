@@ -9,7 +9,6 @@ import { getAllProjects } from "../../../store/reducers/projectSlice";
 import { userRequest } from "../../../requestMethods";
 import Loading from "../../../components/Loading/Loading";
 
-
 export default function ProductList() {
   const { dark } = useSelector((state) => state.dark);
   const dispatch = useDispatch();
@@ -30,7 +29,6 @@ export default function ProductList() {
       .then((res) => {
         dispatch(getAllProjects([null, null]));
       });
-    console.log(allProjects);
   };
 
   const gotoAdd = () => navigation("/addProject");

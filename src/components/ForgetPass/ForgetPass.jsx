@@ -9,8 +9,8 @@ import { signIn } from "../../store/reducers/userSlice";
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
- background-color: #1E87A8;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%231E87A8' cx='50' cy='0' r='50'/%3E%3Cg fill='%232084a3' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%2322819f' cx='50' cy='100' r='50'/%3E%3Cg fill='%23247e9a' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23267b95' cx='50' cy='200' r='50'/%3E%3Cg fill='%23287891' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%232a758c' cx='50' cy='300' r='50'/%3E%3Cg fill='%232c7287' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%232e6f83' cx='50' cy='400' r='50'/%3E%3Cg fill='%23306c7e' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23326a7a' cx='50' cy='500' r='50'/%3E%3Cg fill='%23346775' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23366470' cx='50' cy='600' r='50'/%3E%3Cg fill='%2338616c' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%233a5e67' cx='50' cy='700' r='50'/%3E%3Cg fill='%233c5b62' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%233e585e' cx='50' cy='800' r='50'/%3E%3Cg fill='%23405559' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23425254' cx='50' cy='900' r='50'/%3E%3Cg fill='%23444f50' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23464C4B' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: #1e87a8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%231E87A8' cx='50' cy='0' r='50'/%3E%3Cg fill='%232084a3' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%2322819f' cx='50' cy='100' r='50'/%3E%3Cg fill='%23247e9a' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23267b95' cx='50' cy='200' r='50'/%3E%3Cg fill='%23287891' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%232a758c' cx='50' cy='300' r='50'/%3E%3Cg fill='%232c7287' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%232e6f83' cx='50' cy='400' r='50'/%3E%3Cg fill='%23306c7e' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23326a7a' cx='50' cy='500' r='50'/%3E%3Cg fill='%23346775' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23366470' cx='50' cy='600' r='50'/%3E%3Cg fill='%2338616c' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%233a5e67' cx='50' cy='700' r='50'/%3E%3Cg fill='%233c5b62' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%233e585e' cx='50' cy='800' r='50'/%3E%3Cg fill='%23405559' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23425254' cx='50' cy='900' r='50'/%3E%3Cg fill='%23444f50' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23464C4B' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,13 +42,13 @@ const Title = styled.h1`
 const Input = styled.input`
   flex: 1;
   min-width: 90%;
-  border-radius:25px;
-  background-color:lightgray;
+  border-radius: 25px;
+  background-color: lightgray;
   margin: 20px 10px 0px 0px;
-  border:0px;
-  font-weight:bold;
+  border: 0px;
+  font-weight: bold;
   padding: 10px 30px;
-  margin-botton:5px;
+  margin-botton: 5px;
 `;
 const FormLink = styled.a`
   margin: 5px 0px;
@@ -60,24 +60,23 @@ const FormLink = styled.a`
   }
 `;
 const Button = styled.button`
-
   margin: 10px 0;
   align-self: center;
   width: 40%;
   border: 1px solid white;
   padding: 12px 17px;
-  
-border-radius:25px;
+
+  border-radius: 25px;
   background-color: var(--main-color);
   color: white;
   cursor: pointer;
   white-space: nowrap;
   transition: all ease 0.25s;
   &:hover {
-    border: 1px solid var(--main-color) ;
+    border: 1px solid var(--main-color);
     background-color: #fff;
     color: var(--main-color);
-      border-raduis:25px;
+    border-raduis: 25px;
   }
 `;
 
@@ -87,7 +86,7 @@ const Error = styled.span`
 `;
 
 export default function ForgetPass() {
-    const { dark } = useSelector((state) => state.dark);
+  const { dark } = useSelector((state) => state.dark);
   const { lang } = useSelector((state) => state.language);
   const { serverError, user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
@@ -170,7 +169,6 @@ export default function ForgetPass() {
             setFalg(true);
             const token = res.data.resetToken;
             setInputUser({ ...inputUser, recivedToken: token });
-            console.log(res.data.resetToken);
             setErrMsg({ ...errMsg, email: null, emailEN: null });
           } else {
             setErrMsg({
@@ -181,7 +179,6 @@ export default function ForgetPass() {
           }
         });
     } catch (error) {
-      console.log(error);
       setErrMsg({
         ...errMsg,
         email: "البريد الذى ادخلته غير صحيح",
@@ -192,7 +189,7 @@ export default function ForgetPass() {
 
   return (
     <Container>
-      <Wrapper className={` ${dark?"bg-dark" :"null"} `}>
+      <Wrapper className={` ${dark ? "bg-dark" : "null"} `}>
         <Title>
           {lang === "english" ? "Reset password" : "اعداد كلمة السر"}
         </Title>

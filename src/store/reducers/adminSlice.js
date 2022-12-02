@@ -45,14 +45,12 @@ export const getUserById = createAsyncThunk(
 export const updateUser = createAsyncThunk(
   "admin/updateUser",
   async ([id, user, jwt], { rejectWithValue }) => {
-    console.log(user);
     try {
       const res = await publicRequest.patch(`/users/${id}`, user, {
         headers: {
           jwt: jwt,
         },
       });
-      console.log(res);
     } catch (error) {
       return rejectWithValue(error.message);
     }

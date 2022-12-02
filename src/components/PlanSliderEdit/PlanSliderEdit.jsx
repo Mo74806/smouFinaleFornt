@@ -8,8 +8,7 @@ export default function PlanSliderEdit({ values, changeHandlerParent }) {
     changeHandlerParent(e);
   };
   const [data, setData] = useState(values.imagePlan);
-  console.log("data/*/*/*/*/*/*/");
-  console.log(values.imagePlan);
+
   const deleteImg = (image) => {
     userRequest
       // .patch(
@@ -20,7 +19,6 @@ export default function PlanSliderEdit({ values, changeHandlerParent }) {
         { imageName: image }
       )
       .then((res) => {
-        console.log(res);
         var newData = data.filter((item) => item !== image);
         setData(newData);
       });

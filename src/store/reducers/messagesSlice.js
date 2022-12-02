@@ -9,7 +9,6 @@ export const getAllMessages = createAsyncThunk(
   async (args, { rejectWithValue }) => {
     try {
       const res = await userRequest.get(`${BASE_URL}/`);
-      //   console.log(res.data.data.contacts);
       return res.data.data.contacts;
     } catch (error) {
       return rejectWithValue(error.message);

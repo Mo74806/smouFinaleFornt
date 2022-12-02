@@ -29,8 +29,6 @@ export default function User() {
 
   window.addEventListener("storage", function () {
     setJWT(this.localStorage.getItem("jwt"));
-    console.log(jwt);
-    console.log("localstorage changed from user");
   });
 
   const changeHandler = (e) => {
@@ -174,9 +172,6 @@ export default function User() {
     dispatch(updateUser([id, updatedUser, jwt]));
     dispatch(getUserById([id, jwt]));
   };
-
-  console.log(updatedUser);
-  console.log(error);
 
   return (
     <div className="user">

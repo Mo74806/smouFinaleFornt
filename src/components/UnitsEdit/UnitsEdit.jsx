@@ -17,7 +17,6 @@ export default function UnitsEdit({ values }) {
   //       `http://localhost:3030/api/v1/projects/removeImage/${values.id}/imageCover/${image}`
   //     )
   //     .then((res) => {
-  //       console.log(res);
   //       var newData = data.filter((item) => item !== image);
   //       setData(newData);
   //     });
@@ -38,16 +37,12 @@ export default function UnitsEdit({ values }) {
     }
     // unitsHandlerParent(newArr, i);
     setNewUnits(newArr);
-    console.log("units-*/-*-/-*-/newArr");
-    console.log(newArr);
   };
 
   const submitUnit = async (e, i) => {
     e.preventDefault();
     // toast("updating unit !!");
-    console.log(i);
-    console.log(newUnits);
-    console.log(newUnits[i]);
+
     let form = new FormData();
     if ("name" in newArr[i]) {
       form.append("unitName", newArr[i].name);
@@ -69,7 +64,6 @@ export default function UnitsEdit({ values }) {
       );
     }
     // for (var pair of form.entries()) {
-    //   console.log(pair[0] + "," + pair[1]);
     // }
     let resUnit = await toast.promise(
       userRequest

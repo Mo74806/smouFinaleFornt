@@ -30,12 +30,9 @@ const Projects = () => {
   };
 
   const handleDownload = (id) => {
-    console.log("in download");
-    const res = axios
-      .patch(
-        `http://localhost:3030/api/v1/projects/increaseParsureDownloads/${id}`
-      )
-      .then((resp) => console.log(resp));
+    const res = axios.patch(
+      `http://localhost:3030/api/v1/projects/increaseParsureDownloads/${id}`
+    );
   };
 
   return (

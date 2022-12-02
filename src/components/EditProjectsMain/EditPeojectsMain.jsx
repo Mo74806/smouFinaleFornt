@@ -12,7 +12,6 @@ export default function EditPeojectsMain() {
   const allProjects = useSelector((state) => {
     return state.project.projects.projects;
   });
-  console.log(allProjects);
   useEffect(() => {
     dispatch(getAllProjects());
   }, []);
@@ -22,7 +21,6 @@ export default function EditPeojectsMain() {
     navigation(`/editProject/${id}`);
   };
   const deleteProject = async (id) => {
-    console.log(`http://localhost:3030/api/v1/projects/${id}`);
     const res = await userRequest.delete(
       `http://localhost:3030/api/v1/projects/${id}`
     );

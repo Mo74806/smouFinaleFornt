@@ -8,10 +8,10 @@ import { signIn } from "../../store/reducers/userSlice";
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-background-color: #1E87A8;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%231E87A8' cx='50' cy='0' r='50'/%3E%3Cg fill='%232084a3' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%2322819f' cx='50' cy='100' r='50'/%3E%3Cg fill='%23247e9a' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23267b95' cx='50' cy='200' r='50'/%3E%3Cg fill='%23287891' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%232a758c' cx='50' cy='300' r='50'/%3E%3Cg fill='%232c7287' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%232e6f83' cx='50' cy='400' r='50'/%3E%3Cg fill='%23306c7e' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23326a7a' cx='50' cy='500' r='50'/%3E%3Cg fill='%23346775' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23366470' cx='50' cy='600' r='50'/%3E%3Cg fill='%2338616c' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%233a5e67' cx='50' cy='700' r='50'/%3E%3Cg fill='%233c5b62' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%233e585e' cx='50' cy='800' r='50'/%3E%3Cg fill='%23405559' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23425254' cx='50' cy='900' r='50'/%3E%3Cg fill='%23444f50' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23464C4B' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
-background-attachment: fixed;
-background-size: contain;
+  background-color: #1e87a8;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%231E87A8' cx='50' cy='0' r='50'/%3E%3Cg fill='%232084a3' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%2322819f' cx='50' cy='100' r='50'/%3E%3Cg fill='%23247e9a' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23267b95' cx='50' cy='200' r='50'/%3E%3Cg fill='%23287891' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%232a758c' cx='50' cy='300' r='50'/%3E%3Cg fill='%232c7287' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%232e6f83' cx='50' cy='400' r='50'/%3E%3Cg fill='%23306c7e' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23326a7a' cx='50' cy='500' r='50'/%3E%3Cg fill='%23346775' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23366470' cx='50' cy='600' r='50'/%3E%3Cg fill='%2338616c' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%233a5e67' cx='50' cy='700' r='50'/%3E%3Cg fill='%233c5b62' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%233e585e' cx='50' cy='800' r='50'/%3E%3Cg fill='%23405559' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23425254' cx='50' cy='900' r='50'/%3E%3Cg fill='%23444f50' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23464C4B' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,24 +41,21 @@ const Title = styled.h1`
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
-      color: var(--main-color);
+  color: var(--main-color);
 `;
 const Input = styled.input`
   flex: 1;
 
   min-width: 90%;
-  border-radius:25px;
-  background-color:lightgray;
+  border-radius: 25px;
+  background-color: lightgray;
   margin: 20px 10px 0px 0px;
-  border:0px;
-  font-weight:bold;
+  border: 0px;
+  font-weight: bold;
   padding: 10px 30px;
-  margin-botton:5px;
+  margin-botton: 5px;
 `;
 const FormLink = styled.a`
-
-
-
   font-size: 12px;
   text-decoration: underline;
   cursor: pointer;
@@ -86,13 +83,13 @@ border-radius:25px;
 
 const Error = styled.span`
   color: red;
- text-align:center;
- width:80%;
+  text-align: center;
+  width: 80%;
   font-size: 14px;
 `;
 
 const Login = (props) => {
-    const { dark } = useSelector((state) => state.dark);
+  const { dark } = useSelector((state) => state.dark);
   const { lang } = useSelector((state) => state.language);
   const [inputUser, setInputUser] = useState({});
   let [adminonlyError, setAdminonlyError] = useState(null);
@@ -115,28 +112,26 @@ const Login = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(signIn(inputUser))
-      .then((res) => {
-        if (target === "/admin") {
-          if (res.payload.user.role === "admin") {
-            navigate(`${target}`);
-          } else {
-            lang === "english"
-              ? setAdminonlyError("Admin Dashboard can only accessed by admins")
-              : setAdminonlyError("هذا الجزء مخصص للإدارة فقط");
-          }
+    dispatch(signIn(inputUser)).then((res) => {
+      if (target === "/admin") {
+        if (res.payload.user.role === "admin") {
+          navigate(`${target}`);
         } else {
-          if (res.payload.user) {
-            localStorage.setItem("user", JSON.stringify(res.payload.user));
-            if (target === "/forgotPass") {
-              navigate("/");
-            } else {
-              navigate(`${target}`);
-            }
+          lang === "english"
+            ? setAdminonlyError("Admin Dashboard can only accessed by admins")
+            : setAdminonlyError("هذا الجزء مخصص للإدارة فقط");
+        }
+      } else {
+        if (res.payload.user) {
+          localStorage.setItem("user", JSON.stringify(res.payload.user));
+          if (target === "/forgotPass") {
+            navigate("/");
+          } else {
+            navigate(`${target}`);
           }
         }
-      })
-      .catch((error) => console.log(error));
+      }
+    });
   };
 
   const signUpHandler = () => {
@@ -148,7 +143,7 @@ const Login = (props) => {
 
   return (
     <Container>
-      <Wrapper className={` ${dark?"bg-dark" :"null"} `}>
+      <Wrapper className={` ${dark ? "bg-dark" : "null"} `}>
         <Title>{lang === "english" ? "Login" : "تسجيل الدخول"}</Title>
 
         {adminonlyError && <Error>{adminonlyError}</Error>}
@@ -160,8 +155,11 @@ const Login = (props) => {
               : "كلمة السر او البريد الإلكترونى غير صحيح"}
           </Error>
         )}
-        <Form dir={`${lang==="english"?"ltr":"rtl"}`} onSubmit={submitHandler} onChange={changeHandler}>
-
+        <Form
+          dir={`${lang === "english" ? "ltr" : "rtl"}`}
+          onSubmit={submitHandler}
+          onChange={changeHandler}
+        >
           <Input
             type="email"
             placeholder="email"
@@ -180,17 +178,11 @@ const Login = (props) => {
           />
           <NavLink
             to={"/forgotPass"}
-            className={
-             "align-self-start mx-4 px-3 my-1" 
-            }
+            className={"align-self-start mx-4 px-3 my-1"}
           >
             {lang === "english" ? "Forgot password ?" : "نسيت كلمة السر ؟"}
           </NavLink>
-          <FormLink
-            className={
-             "align-self-start mx-4 px-3 my-1" 
-            }
-          >
+          <FormLink className={"align-self-start mx-4 px-3 my-1"}>
             <FormLink onClick={signUpHandler}>
               {lang === "english" ? "create new account" : "انشاء حساب جديد"}
             </FormLink>

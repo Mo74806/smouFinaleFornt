@@ -9,8 +9,7 @@ export default function ServicesSliderEdit({ values, changeHandlerParent }) {
   };
 
   const [data, setData] = useState(values.imageService);
-  console.log("data/*/*/*/*/*/*/");
-  console.log(values.imageService);
+
   const deleteImg = (image) => {
     userRequest
       .patch(
@@ -18,7 +17,6 @@ export default function ServicesSliderEdit({ values, changeHandlerParent }) {
         { imageName: image }
       )
       .then((res) => {
-        console.log(res);
         var newData = data.filter((item) => item !== image);
         setData(newData);
       });
