@@ -22,7 +22,7 @@ export default function EditPeojectsMain() {
   };
   const deleteProject = async (id) => {
     const res = await userRequest.delete(
-      `http://localhost:3030/api/v1/projects/${id}`
+      `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects/${id}`
     );
   };
   return (

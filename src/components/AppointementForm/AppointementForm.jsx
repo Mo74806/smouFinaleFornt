@@ -34,7 +34,7 @@ export default function AppointementForm() {
     const jwt = localStorage.getItem("jwt");
     setapp(null);
     const response = await axios.delete(
-      `http://localhost:3030/api/v1/appointements/${appointement._id}`,
+      `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/appointements/${appointement._id}`,
       { headers: { jwt } }
     );
   };
@@ -47,7 +47,7 @@ export default function AppointementForm() {
       const jwt = localStorage.getItem("jwt");
 
       const response1 = await axios.get(
-        `http://localhost:3030/api/v1/appointements/user/${localUser._id}`,
+        `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/appointements/user/${localUser._id}`,
         { headers: { jwt } }
       );
 
@@ -66,7 +66,7 @@ export default function AppointementForm() {
     if (form.day) {
       const jwt = localStorage.getItem("jwt");
       const response = await axios.get(
-        `http://localhost:3030/api/v1/appointements/free/${form.day}`,
+        `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/appointements/free/${form.day}`,
         { headers: { jwt } }
       );
       if (
@@ -87,7 +87,7 @@ export default function AppointementForm() {
     const jwt = localStorage.getItem("jwt");
     axios
       .post(
-        `http://localhost:3030/api/v1/appointements`,
+        `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/appointements`,
         { startDate: `${form.day}T${h}:00` },
         { headers: { jwt } }
       )

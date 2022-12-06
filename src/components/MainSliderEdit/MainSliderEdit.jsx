@@ -11,7 +11,7 @@ export default function MainSliderEdit({ values, changeHandlerParent }) {
   const deleteImg = (image) => {
     userRequest
       .patch(
-        `http://localhost:3030/api/v1/projects/removeImage/${values.id}/imageCover/`,
+        `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects/removeImage/${values.id}/imageCover/`,
         { imageName: image }
       )
       .then((res) => {
@@ -38,6 +38,7 @@ export default function MainSliderEdit({ values, changeHandlerParent }) {
                           className="mx-2 my-2"
                           src={image}
                           width="200px"
+                          alt="slider-image"
                         />
                         <ConfirmToast
                           asModal={true}

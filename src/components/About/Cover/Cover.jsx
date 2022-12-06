@@ -27,7 +27,11 @@ const Cover = () => {
               href="#market"
               className="btn arrow-btn btn-secondary fw-bold border-white"
             >
-              <img className="arrow_cover" src="./imgs/about/arrow.png" alt="" />
+              <img
+                className="arrow_cover"
+                src="./imgs/about/arrow.png"
+                alt="arrow-mark"
+              />
             </a>
           </p>
         </main>

@@ -2,7 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { userRequest } from "../../requestMethods";
 
-const BASE_URL = "http://localhost:3030/api/v1/contacts";
+const BASE_URL =
+  "https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/contacts";
 
 export const getAllMessages = createAsyncThunk(
   "messages/getAllMessages",

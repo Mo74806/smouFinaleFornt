@@ -12,10 +12,10 @@ export default function PlanSliderEdit({ values, changeHandlerParent }) {
   const deleteImg = (image) => {
     userRequest
       // .patch(
-      //   `http://localhost:3030/api/v1/projects/removeImage/${values.id}/imagePlan/${image}`
+      //   `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects/removeImage/${values.id}/imagePlan/${image}`
       // )
       .patch(
-        `http://localhost:3030/api/v1/projects/removeImage/${values.id}/imagePlan/`,
+        `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects/removeImage/${values.id}/imagePlan/`,
         { imageName: image }
       )
       .then((res) => {
@@ -41,6 +41,7 @@ export default function PlanSliderEdit({ values, changeHandlerParent }) {
                         className="mx-2 my-2"
                         src={image}
                         width="200px"
+                        alt="slider-image"
                       />
                       <ConfirmToast
                         asModal={true}

@@ -9,7 +9,7 @@ export default class Card extends Component {
         <img
           src="./imgs/about/wallpaper2.jpg"
           className="card-img-top"
-          alt="..."
+          alt="wallpaper"
         />
         <div className="card-body card-body-about ">
           <h5 className="card-title card-title-about"> {title}</h5>

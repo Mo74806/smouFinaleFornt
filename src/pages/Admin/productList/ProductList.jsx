@@ -25,7 +25,9 @@ export default function ProductList() {
   }, []);
   const handleDelete = (id) => {
     const res = userRequest
-      .delete(`http://localhost:3030/api/v1/projects/${id}`)
+      .delete(
+        `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects/${id}`
+      )
       .then((res) => {
         dispatch(getAllProjects([null, null]));
       });

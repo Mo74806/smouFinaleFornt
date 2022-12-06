@@ -153,7 +153,10 @@ export default function EditProject() {
 
     const res = await toast.promise(
       userRequest
-        .patch(`http://localhost:3030/api/v1/projects/${id}`, formData)
+        .patch(
+          `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects/${id}`,
+          formData
+        )
         .then(() => navigation("/admin")),
       {
         pending: "Updating Project please wait",

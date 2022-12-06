@@ -23,7 +23,7 @@ const ImageBox = styled.div`
 const Title = styled.h5`
   text-shadow: 4px 3px 0px #000, 9px 8px 0px rgba(0, 0, 0, 0.15);
   color: var(--main-color);
-    white-space: nowrap;
+  white-space: nowrap;
   font-weight: 600;
   font-size: 3rem;
   white-space: nowrap;
@@ -66,7 +66,7 @@ const Slider = () => {
       {sliderItems.map((slide) => (
         <Carousel.Item>
           <ImageBox>
-            <img className="d-block w-100" src={slide.img} alt="" />
+            <img className="d-block w-100" src={slide.img} alt="slider-image" />
           </ImageBox>
           <Carousel.Caption
             className={
@@ -75,8 +75,10 @@ const Slider = () => {
                 : "d-flex flex-column align-items-end justify-content-center carousel-captionAR"
             }
           >
-            <Title >{lang === "english" ? slide.titleEN : slide.title}</Title>
-            <Desc className="" >{lang === "english" ? slide.descEN : slide.desc}</Desc>
+            <Title>{lang === "english" ? slide.titleEN : slide.title}</Title>
+            <Desc className="">
+              {lang === "english" ? slide.descEN : slide.desc}
+            </Desc>
             <Button onClick={clickHandler}>
               {lang === "english" ? "Read more" : "أقرأ المزيد"}
             </Button>

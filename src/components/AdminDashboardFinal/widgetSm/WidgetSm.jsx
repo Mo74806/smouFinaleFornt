@@ -39,7 +39,7 @@ export default function WidgetSm() {
             <li className="widgetSmListItem">
               <img
                 src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png"
-                alt=""
+                alt="widgetSmImg"
                 className="widgetSmImg"
               />
               <div className="widgetSmUser mx-2">

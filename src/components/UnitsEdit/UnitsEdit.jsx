@@ -14,7 +14,7 @@ export default function UnitsEdit({ values }) {
   //   e.preventDefault();
   //   axios
   //     .patch(
-  //       `http://localhost:3030/api/v1/projects/removeImage/${values.id}/imageCover/${image}`
+  //       `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects/removeImage/${values.id}/imageCover/${image}`
   //     )
   //     .then((res) => {
   //       var newData = data.filter((item) => item !== image);
@@ -68,7 +68,7 @@ export default function UnitsEdit({ values }) {
     let resUnit = await toast.promise(
       userRequest
         .patch(
-          `http://localhost:3030/api/v1/projects/updateUnit/${values[0].id}/${newArr[i].unitId}`,
+          `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects/updateUnit/${values[0].id}/${newArr[i].unitId}`,
           form
         )
         .then((res) => {
@@ -135,7 +135,7 @@ export default function UnitsEdit({ values }) {
                   <Form.Label className="position-relative">
                     <img
                       src={item.imageCover}
-                      alt="..."
+                      alt="image-cover"
                       className="mx-2 my-2"
                       width="200px"
                     ></img>

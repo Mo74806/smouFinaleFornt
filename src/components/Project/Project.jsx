@@ -8,7 +8,6 @@ const Container = styled.div`
   flex: 1;
   min-width: 30%;
   max-width: 50%;
-  
 
   margin: 20px 20px;
   ${mobile({ minWidth: "80%" })}
@@ -25,7 +24,6 @@ const Wrapper = styled.div`
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 const Image = styled.div`
- 
   border-radius: 30px 30px 0 0;
   overflow: hidden;
   margin-bottom: 10px;
@@ -51,30 +49,30 @@ const Title = styled.h5`
   text-align: center;
   color: #fff;
   font-weight: bold;
-  font-size:2rem;
-  background-color:rgba(1,1,1,0.5);
-  width:100%;
-  height:60px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+  font-size: 2rem;
+  background-color: rgba(1, 1, 1, 0.5);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius:30px;
+  border-radius: 30px;
 `;
 const InfoText = styled.p`
   color: #aaa;
   font-size: 1rem;
-  padding:0px 10px;
+  padding: 0px 10px;
   text-align: center;
-  height:100%;
+  height: 100%;
 `;
 const Button = styled.button`
   border: none;
   white-space: nowrap;
   border-radius: 10px;
-  font-weight:bold;
-  border-radius:30px;
+  font-weight: bold;
+  border-radius: 30px;
   transition: all ease-in-out 0.2s;
   padding: 7px 20px;
   &:hover {
@@ -89,10 +87,7 @@ const Project = ({ project }) => {
     <Container className="p-2 px-3">
       <Wrapper className="">
         <Image>
-          <Img
-            src={`${project.imageCover[0]}`}
-            alt="test"
-          />
+          <Img src={`${project.imageCover[0]}`} alt="project-cover" />
         </Image>
         <Info>
           <InfoSection>
@@ -100,7 +95,7 @@ const Project = ({ project }) => {
             <InfoText>
               {lang === "english" ? project.descriptionEN : project.description}
             </InfoText>
-            <Link   to={`/projects/${project._id}`}>
+            <Link to={`/projects/${project._id}`}>
               <Button>
                 {lang === "english" ? "Show more" : "أعرض المزيد"}
               </Button>

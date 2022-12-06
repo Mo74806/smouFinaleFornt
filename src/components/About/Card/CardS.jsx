@@ -29,7 +29,7 @@ export default function CardS() {
             <img
               className="quote1"
               src="./imgs/about/straight-quote1.png"
-              alt=""
+              alt="quoteMark"
             />
           </span>
 

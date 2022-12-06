@@ -29,7 +29,7 @@ export default function ContactForm() {
     e.preventDefault();
 
     const response = await axios.post(
-      "http://localhost:3030/api/v1/contacts",
+      "https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/contacts",
       form
     );
 

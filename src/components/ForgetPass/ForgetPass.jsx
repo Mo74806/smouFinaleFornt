@@ -131,7 +131,7 @@ export default function ForgetPass() {
       try {
         await axios
           .patch(
-            `http://localhost:3030/api/v1/users/resetPassword/${inputUser.recivedToken}`,
+            `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/users/resetPassword/${inputUser.recivedToken}`,
             {
               password: inputUser.password,
               passwordConfirm: inputUser.passwordConfirm,
@@ -161,9 +161,12 @@ export default function ForgetPass() {
     e.preventDefault();
     try {
       await axios
-        .post(`http://localhost:3030/api/v1/users/forgotPassword`, {
-          email: inputUser.email,
-        })
+        .post(
+          `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/users/forgotPassword`,
+          {
+            email: inputUser.email,
+          }
+        )
         .then((res) => {
           if (res.status >= 200 && res.status < 400) {
             setFalg(true);

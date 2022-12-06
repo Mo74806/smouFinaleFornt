@@ -13,10 +13,14 @@ export default function Appointments() {
 
   useEffect(() => {
     const data = userRequest
-      .get("http://localhost:3030/api/v1/appointements")
+      .get(
+        "https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/appointements"
+      )
       .then((res) => setAppoint(res.data.data.appointements));
     const users = userRequest
-      .get("http://localhost:3030/api/v1/users")
+      .get(
+        "https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/users"
+      )
       .then((res) => {
         setUsersList(res.data.data.users);
       });
@@ -24,7 +28,9 @@ export default function Appointments() {
 
   const handleDelete = (id) => {
     const res = userRequest
-      .delete(`http://localhost:3030/api/v1/appointements/${id}`)
+      .delete(
+        `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/appointements/${id}`
+      )
       .then(() => {
         let newApp = appoint.filter((item) => item.id !== id);
         setAppoint(newApp);
@@ -32,9 +38,12 @@ export default function Appointments() {
   };
   const handleApp = async (id, e) => {
     const res = await userRequest
-      .patch(`http://localhost:3030/api/v1/appointements/${id}`, {
-        confirm: true,
-      })
+      .patch(
+        `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/appointements/${id}`,
+        {
+          confirm: true,
+        }
+      )
       .then((res) => {
         let newApp = [...appoint];
         // newApp[id] = { ...newApp[id], confirm: true };

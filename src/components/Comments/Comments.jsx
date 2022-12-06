@@ -35,9 +35,12 @@ export default function Comments() {
     if (comments[index].stared === "false") {
       // newArr[index].stared = "true";
       const res = await userRequest
-        .patch(`http://localhost:3030/api/v1/contacts/${id}`, {
-          stared: "true",
-        })
+        .patch(
+          `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/contacts/${id}`,
+          {
+            stared: "true",
+          }
+        )
         .then(() => {
           const newArr = [...comments];
           newArr[index] = { ...newArr[index], stared: "true" };
@@ -47,9 +50,12 @@ export default function Comments() {
     } else {
       // newArr[index].stared = "false";
       const res = await userRequest
-        .patch(`http://localhost:3030/api/v1/contacts/${id}`, {
-          stared: "false",
-        })
+        .patch(
+          `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/contacts/${id}`,
+          {
+            stared: "false",
+          }
+        )
         .then(() => {
           const newArr = [...comments];
           newArr[index] = { ...newArr[index], stared: "false" };
@@ -62,7 +68,9 @@ export default function Comments() {
   };
   const deleteComment = async (id) => {
     const res = await userRequest
-      .delete(`http://localhost:3030/api/v1/contacts/${id}`)
+      .delete(
+        `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/contacts/${id}`
+      )
       .then((resp) => {
         let newArr = comments.filter((item) => item.id !== id);
         setComment(newArr);

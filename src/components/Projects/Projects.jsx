@@ -31,7 +31,7 @@ const Projects = () => {
 
   const handleDownload = (id) => {
     const res = axios.patch(
-      `http://localhost:3030/api/v1/projects/increaseParsureDownloads/${id}`
+      `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects/increaseParsureDownloads/${id}`
     );
   };
 
@@ -61,7 +61,7 @@ const Projects = () => {
                 <div className="project-card row d-flex justify-content-center align-items-center">
                   <div className="col-lg-8 order-lg-1 mb-3">
                     <div className="image-container">
-                      <img src={project.imageCover[0]} alt="" />
+                      <img src={project.imageCover[0]} alt="project-cover" />
                     </div>
                   </div>
                   <div className="col-lg-4 order-lg-0">
@@ -89,7 +89,7 @@ const Projects = () => {
                             className="px-3 py-2"
                           >
                             <a
-                              href={`http://localhost:3030/${project.parsure}`}
+                              href={`https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/${project.parsure}`}
                               className="text-decoration-none text-black"
                             >
                               {lang === "english"

@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:3030/api/v1/projects";
+const BASE_URL =
+  "https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects";
 
 export const getAllProjects = createAsyncThunk(
   "project/getAllProjects",

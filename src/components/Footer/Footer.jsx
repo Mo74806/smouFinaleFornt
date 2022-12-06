@@ -50,7 +50,7 @@ const Footer = () => {
               <img
                 className="footer-logo"
                 src="./imgs/logo/شعار سمو الاصالة ابيض.png"
-                alt=""
+                alt="logo"
               />
             </a>
           </div>

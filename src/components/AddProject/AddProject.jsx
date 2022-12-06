@@ -89,7 +89,6 @@ export default function AddProject() {
 
   // Submit Function to add project
   const addNewProject = async (e) => {
-
     if (
       error.planSlider ||
       error.flag ||
@@ -147,7 +146,7 @@ export default function AddProject() {
           formValues.housingUnits[i].descriptionEN
         );
       }
-      // const res = await userRequest.get("http://localhost:3030/api/v1/projects");
+      // const res = await userRequest.get("https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects");
 
       formData.append("name", formValues.name);
       formData.append("nameEN", formValues.nameEN);
@@ -163,7 +162,10 @@ export default function AddProject() {
       formData.append("housingUnits", formValues.housingUnits);
       const res = await toast.promise(
         userRequest
-          .post("http://localhost:3030/api/v1/projects", formData)
+          .post(
+            "https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects",
+            formData
+          )
           .then((res) => {
             navigation("/admin");
           }),
@@ -177,7 +179,6 @@ export default function AddProject() {
   };
   // Handeler fucntion to add units to form state
   const unitHandler = (e, i) => {
-
     let newArr = [...formValues.housingUnits];
     if (e.target.name === "unitImg") {
       newArr[i] = { ...newArr[i], [e.target.name]: [...e.target.files] };

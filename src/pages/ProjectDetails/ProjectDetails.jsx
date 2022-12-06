@@ -26,7 +26,7 @@ export default function ProjectDetails() {
 
   const handleDownload = () => {
     const res = axios.patch(
-      `http://localhost:3030/api/v1/projects/increaseParsureDownloads/${project._id}`
+      `https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/api/v1/projects/increaseParsureDownloads/${project._id}`
     );
   };
 
@@ -147,7 +147,7 @@ export default function ProjectDetails() {
                       <img
                         src={`${project && project.imagePlan[0]}`}
                         className="d-block w-100 image-project"
-                        alt="..."
+                        alt="image-plan"
                       />
                     </div>
                     {project &&
@@ -162,7 +162,7 @@ export default function ProjectDetails() {
                               <img
                                 src={`${item}`}
                                 className="d-block w-100  image-project "
-                                alt="..."
+                                alt="image-plan"
                               />
                             </div>
                           );
@@ -212,7 +212,7 @@ export default function ProjectDetails() {
                       <img
                         src={`${project && project.imageService[0]}`}
                         className="d-block w-100 image-project"
-                        alt="..."
+                        alt="image-service"
                       />
                     </div>
                     {project &&
@@ -223,7 +223,7 @@ export default function ProjectDetails() {
                             <img
                               src={`${item}`}
                               className="d-block w-100 image-project"
-                              alt="..."
+                              alt="image-service"
                             />
                           </div>
                         ))}
@@ -281,7 +281,7 @@ export default function ProjectDetails() {
                           <img
                             src={`${item.imageCover}`}
                             className="card-img-top "
-                            alt="..."
+                            alt="unit-cover"
                           />
                         </div>
                         <div className={`card-body rounded-0 `}>
