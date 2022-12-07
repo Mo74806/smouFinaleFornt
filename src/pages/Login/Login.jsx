@@ -46,7 +46,7 @@ const Title = styled.h1`
 const Input = styled.input`
   flex: 1;
 
-  min-width: 90%;
+  width: 100%;
   border-radius: 25px;
   background-color: lightgray;
   margin: 20px 10px 0px 0px;
@@ -143,7 +143,7 @@ const Login = (props) => {
 
   return (
     <Container>
-      <Wrapper className={` ${dark ? "bg-dark" : "null"} `}>
+      <Wrapper className={`row ${dark ? "bg-dark" : "null"} `}>
         <Title>{lang === "english" ? "Login" : "تسجيل الدخول"}</Title>
 
         {adminonlyError && <Error>{adminonlyError}</Error>}

@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 80%;
   background-color: #fff;
   border-radius: 20px;
   padding: 20px;
@@ -41,13 +41,15 @@ const Title = styled.h1`
 `;
 const Input = styled.input`
   flex: 1;
-  min-width: 90%;
+  width: 100%;
   border-radius: 25px;
   background-color: lightgray;
   margin: 20px 10px 0px 0px;
   border: 0px;
   font-weight: bold;
-  padding: 10px 30px;
+  padding: 1rem 3rem;
+  display:flex;
+  justify-content:center;
   margin-botton: 5px;
 `;
 const FormLink = styled.a`
@@ -62,7 +64,7 @@ const FormLink = styled.a`
 const Button = styled.button`
   margin: 10px 0;
   align-self: center;
-  width: 40%;
+  width: 80%;
   border: 1px solid white;
   padding: 12px 17px;
 
