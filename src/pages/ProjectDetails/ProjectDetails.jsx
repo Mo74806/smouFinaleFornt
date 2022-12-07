@@ -124,7 +124,7 @@ export default function ProjectDetails() {
             <div
               className={`col-md-5 my-5  col-10  ${
                 dark ? "contact-form-form-body-dark" : "contact-form-form-body"
-              } my-3 py-0"`}
+              } my-3 "`}
             >
 <div className="row d-flex justify-content-end">
             <div className={`text-center   fw-bold fs-3 aboutProject 
