@@ -108,13 +108,13 @@ export default function ProjectDetails() {
                 
                 className="rounded-2 video "
               ></iframe>
-              <div className="row d-flex justify-content-end">
+              <div className="row d-flex mx-1 justify-content-end">
             <div className={`text-center   fw-bold fs-3 ${lang === "english"
                         ? "aboutProject1EN"
                         : "aboutProject1"} 
             ${
                 dark ? "contact-form-form-body-dark" : "contact-form-form-body"
-              } m-0 p-0 py-2  col-5  text-white`}>
+              } m-0 p-0 py-2  col-5 mx-4   text-white`}>
             {lang === "english"
                         ? "watch prograss"
                         : "أخر التطورات"}
@@ -134,7 +134,7 @@ export default function ProjectDetails() {
                         : "aboutProject"} 
             ${
                 dark ? "contact-form-form-body-dark" : "contact-form-form-body"
-              } m-0 p-0 py-2  col-5  text-white`}>
+              } m-0 p-0 py-2  col-5 mx-3  text-white`}>
             {lang === "english"
                         ? "About Project"
                         : "عن المشروع"}
