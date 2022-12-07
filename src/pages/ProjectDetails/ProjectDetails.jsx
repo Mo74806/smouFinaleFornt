@@ -96,26 +96,52 @@ export default function ProjectDetails() {
 
         {/* end yasser slider */}
         <div className="container my-5">
-          <div className="row my-5 d-flex justify-content-around">
-            <div className={`col-md-5   "`}>
+								  <div className="row my-5  d-flex justify-content-around">
+								  <div className={`col-md-5 col-11 my-5   "`}>
+            
               <iframe
                 src={project && project.videos}
                 title="Park View بارك فيو الخبر"
                 // frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 // allowFullScreen
-                className="rounded-2"
+                
+                className="rounded-2 video "
               ></iframe>
+              <div className="row d-flex justify-content-end">
+            <div className={`text-center   fw-bold fs-3 aboutProject1 
+            ${
+                dark ? "contact-form-form-body-dark" : "contact-form-form-body"
+              } m-0 p-0 py-2  col-5  text-white`}>
+            {lang === "english"
+                        ? "watch prograss"
+                        : "أخر التطورات"}
+            
+            </div>
+            
+            </div>
             </div>
             <div
-              className={`col-md-5  ${
+              className={`col-md-5 my-5  col-10  ${
                 dark ? "contact-form-form-body-dark" : "contact-form-form-body"
-              } my-3"`}
+              } my-3 py-0"`}
             >
+<div className="row d-flex justify-content-end">
+            <div className={`text-center   fw-bold fs-3 aboutProject 
+            ${
+                dark ? "contact-form-form-body-dark" : "contact-form-form-body"
+              } m-0 p-0 py-2  col-5  text-white`}>
+            {lang === "english"
+                        ? "About Project"
+                        : "عن المشروع"}
+            
+            </div>
+            
+            </div>
               <div className="">
                 <div className="">
                   {project && (
-                    <p className="card-text text-center text-light fs-6 fw-semibold px-2">
+                    <p className="card-text py-0  text-center text-light fs-6 fw-semibold px-2">
                       {lang === "english"
                         ? project.descriptionEN
                         : project.description}

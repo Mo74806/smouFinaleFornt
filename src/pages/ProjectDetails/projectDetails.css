@@ -71,7 +71,28 @@ box-shadow:2px 2px 2px rgba(1,1,1,0.5);
 .image-container {
   overflow: hidden;
 }
+.video{
+height:250px;
 
+}
+
+.aboutProject{
+position:relative;
+top:-70px;
+
+right:-40px;
+  background-color: rgb(39, 53, 90) 
+
+}
+
+.aboutProject1{
+position:relative;
+top:-280px;
+
+right:-40px;
+  background-color: rgb(39, 53, 90) 
+
+}
 .btn-brucher{
 background-color:var(--second-color) !important;
 color:white !important;

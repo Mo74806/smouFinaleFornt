@@ -6,10 +6,10 @@ function Values() {
   const { lang } = useSelector((state) => state.language);
   const { dark } = useSelector((state) => state.dark);
   return (
-    <div className="container-all " dir="rtl">
+    <div className="py-5 " dir="rtl">
       <div className="featu">
         <div
-          className={`row col-xl-10 col-12 ${
+          className={` row col-xl-10 col-12 ${
             dark ? "featuretteDark" : "featurette"
           }`}
           id="vision"

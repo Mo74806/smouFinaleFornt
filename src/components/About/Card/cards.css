@@ -10,7 +10,7 @@
   border-radius: 15px;
 
   min-width: 100%;
-  height: 500px;
+
 
   position: relative;
 
@@ -65,7 +65,7 @@
   background-color: transparent;
   background-position: center;
 
-  width: 60%;
+  width: 100%;
   height: 30%;
   overflow: hidden;
 
@@ -78,6 +78,11 @@
   transition: width ease 0.4s, height ease 0.8s;
   cursor: pointer;
 }
+.card{
+
+transform:scale(0.9);
+
+}
 #value1 {
   padding-top: 70px;
 }
@@ -85,27 +90,27 @@
   background: linear-gradient(to top, #61564d55, #8e7e715b),
     url("../../../../public/imgs/about/wallpaper2.jpg");
   background-position: center;
-  width: 90%;
-  height: 220px;
+  width: 100%;
+  height:100%;
+
   transition: all ease 0.9s;
 }
-.card-body-about:hover {
-  border-radius: 15px;
-}
+
 .hide {
   font-size: 20px;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 .card-body-about:hover .hide {
   display: block;
   color: #61564d;
+
 }
 
 .card-title-about {
-  color: #1d709d;
+
   font-family: "Cairo", sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 21px !important;
+  font-weight: bold;
+  font-size: 2rem;
 }
 .hide {
   display: none;
@@ -122,125 +127,18 @@
   font-size: 50px;
   font-family: "Cairo";
 
-  position: absolute;
-  top: 20px;
-  left: 80%;
+
 }
 
 .quote1 {
   width: 60px;
   height: 60px;
 
-  position: absolute;
-  left: 150px;
+ 
 }
 
-@media (max-width: 1024px) {
-  .card-title-about {
-    font-size: 1rem !important;
-    width: 130% !important;
-    position: absolute;
-    left: -20px;
-  }
-  .card-body-about:hover {
-    width: 100%;
-    height: 170px;
-    border-radius: 15px;
-  }
-  .hide {
-    font-size: 15px !important;
-    margin-top: 25px;
-  }
-}
 
-@media (max-width: 768px) {
-  .card-title-about {
-    font-size: 0.8rem !important;
-    width: 130% !important;
-    position: absolute;
-    left: -10px;
-  }
-  .quote1 {
-    width: 50px;
-    height: 50px;
-    left: 150px;
-    top: 0 !important;
-  }
-  .featurette-heading1 {
-    font-weight: 300;
-    font-size: 50px;
-    font-family: "Cairo";
 
-    position: absolute;
-    top: 20px;
-    left: 70%;
-  }
-  .card-body-about:hover {
-    width: 110%;
-    height: 130px;
-    border-radius: 15px;
-  }
-  .card-body-about:hover + .card-title-about {
-  }
-  .hide {
-    font-size: 12px !important;
-    margin-top: 20px;
-  }
-}
-
-@media (max-width: 425px) {
-  .card-group-about > .card-about,
-  .card-group-aboutDark > .card-about {
-    min-width: 108px !important;
-  }
-  .card-group-about,
-  .card-group-aboutDark {
-    display: flex !important;
-    flex-direction: column !important;
-    margin-left: 0 !important;
-
-    overflow: hidden !;
-  }
-  .card-body-about {
-    width: 100%;
-    margin: 0;
-  }
-
-  .card-about {
-    width: 500px !important;
-  }
-
-  .text-card {
-    font-size: 25px !important;
-    margin-left: 10px !important;
-  }
-
-  #text-card {
-    right: 10px !important;
-    font-family: "Cairo", sans-serif !important;
-    font-weight: 700 !important;
-  }
-  .quote1 {
-    width: 30px;
-    height: 30px;
-    left: 30px;
-    top: 0 !important;
-  }
-  .card-title-about {
-    font-size: 0.7rem !important;
-
-    width: 130% !important;
-    position: absolute;
-    left: -15px;
-  }
-  .card-body-about:hover {
-    width: 120%;
-    height: 120px;
-  }
-  .hide {
-    font-size: 9.5px !important;
-  }
-}
 
 .values {
   color: #1d709d;

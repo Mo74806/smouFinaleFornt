@@ -10,7 +10,7 @@ export default function CardS() {
   const { dark } = useSelector((state) => state.dark);
   return (
     <div
-      className={`postion-relative container-1 ${dark && "bg-dark"}`}
+      className={`postion-relative   container-1 ${dark && "bg-dark"}`}
       id="value1"
     >
       <div
@@ -24,7 +24,7 @@ export default function CardS() {
         data-animation="slide-right"
       >
         {" "}
-        <h2 className="featurette-heading1">
+        <h2 className=" mt-5 px-3 row d-flex align-items-start justify-content-start">
           <span>
             <img
               className="quote1"
@@ -37,6 +37,7 @@ export default function CardS() {
             {lang === "english" ? "Values" : "قيمتنا"}
           </span>
         </h2>{" "}
+        <div className="row d-flex my-5 py-xl-5 px-xl-5 justify-content-center">
         {cards.map((cards) => (
           <Card
             className={`${dark && "bg-dark"}`}
@@ -45,6 +46,7 @@ export default function CardS() {
             des={lang === "english" ? cards.desEN : cards.des}
           />
         ))}
+      </div>
       </div>
     </div>
   );
