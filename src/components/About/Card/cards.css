@@ -97,8 +97,8 @@ transform:scale(0.9);
 }
 
 .hide {
-  font-size: 20px;
-  margin-top: 10px;
+  font-size: 2rem;
+
 }
 .card-body-about:hover .hide {
   display: block;
@@ -112,11 +112,7 @@ transform:scale(0.9);
   font-weight: bold;
   font-size: 2rem;
 }
-.hide {
-  display: none;
-  width: 100%;
-  font-size: 18px !important;
-}
+
 
 .postion-relative {
   position: relative;
