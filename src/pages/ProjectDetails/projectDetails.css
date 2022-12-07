@@ -93,6 +93,24 @@ right:-40px;
   background-color: rgb(39, 53, 90) 
 
 }
+
+.aboutProjectEN{
+position:relative;
+top:-70px;
+
+left:-40px;
+  background-color: rgb(39, 53, 90) 
+
+}
+
+.aboutProject1EN{
+position:relative;
+top:-280px;
+
+left:-40px;
+  background-color: rgb(39, 53, 90) 
+
+}
 .btn-brucher{
 background-color:var(--second-color) !important;
 color:white !important;

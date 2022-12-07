@@ -109,7 +109,9 @@ export default function ProjectDetails() {
                 className="rounded-2 video "
               ></iframe>
               <div className="row d-flex justify-content-end">
-            <div className={`text-center   fw-bold fs-3 aboutProject1 
+            <div className={`text-center   fw-bold fs-3 ${lang === "english"
+                        ? "aboutProject1EN"
+                        : "aboutProject1"} 
             ${
                 dark ? "contact-form-form-body-dark" : "contact-form-form-body"
               } m-0 p-0 py-2  col-5  text-white`}>
@@ -127,7 +129,9 @@ export default function ProjectDetails() {
               } my-3 "`}
             >
 <div className="row d-flex justify-content-end">
-            <div className={`text-center   fw-bold fs-3 aboutProject 
+            <div className={`text-center   fw-bold fs-3 ${lang === "english"
+                        ? "aboutProjectEN"
+                        : "aboutProject"} 
             ${
                 dark ? "contact-form-form-body-dark" : "contact-form-form-body"
               } m-0 p-0 py-2  col-5  text-white`}>
@@ -289,7 +293,7 @@ export default function ProjectDetails() {
         <div className="">
           <div className="container">
             <h3
-              className={`text-center mt-5 fw-bolder fs-1 mb-5 ${
+              className={`text-center mt-5 fw-bold fs-1 mb-5 ${
                 dark ? "text-customDark" : "text-custom"
               }`}
             >
