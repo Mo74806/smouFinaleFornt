@@ -2,11 +2,18 @@
   background-color: white;
   box-shadow: rgb(76, 95, 116) 0px 20px 30px -10px;
   border-bottom: 3px solid var(--main-color);
-  z-index: 99999;
+
+ top:0;
 }
 .navbar-nav {
   --bs-nav-link-padding-x: 0.5rem !important;
   /* flex-direction: row !important; */
+}
+
+
+.toggler-white{
+color:white !important;
+
 }
 .navbar-brand {
   display: flex;
@@ -91,7 +98,8 @@
     font-size: 1.2rem;
   }
 }
-
+.btn{
+width:100px;}
 .text-primary {
   color: var(--light-color) !important;
 }

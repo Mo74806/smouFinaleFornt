@@ -12,7 +12,7 @@ const About = () => {
   const { dark } = useSelector((state) => state.dark);
   useEffect(() => {
     scroll.scrollToTop();
-  });
+  },[]);
   return (
     <div className={`body ${dark && "bg-dark"}`}>
       <Cover />

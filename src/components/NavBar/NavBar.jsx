@@ -32,16 +32,18 @@ const NavBar = () => {
   const langChange = () => {
     dispatch(changeLanguge());
   };
-  const darkChange = () => {
+  const darkChange = (e) => {
+
     dispatch(changeDark());
+      e.preventDeafult();
   };
 
   return (
     <nav
       className={
         dark === false
-          ? "navbar sticky-top navbar-expand-lg py-1"
-          : "navbar bg-dark sticky-top navbar-expand-lg py-1"
+          ? "navbar sticky-top navbar-expand-lg py-1  "
+          : "navbar bg-dark sticky-top navbar-expand-lg py-1  "
       }
     >
       <div className="container">
@@ -57,7 +59,7 @@ const NavBar = () => {
             </a>
           </div> */}
         <div
-          className="navbar-brand d-flex justify-content-between-align-items-center order-lg-0"
+          className="navbar-brand d-flex justify-content-between-align-items-center my-auto order-lg-0"
           onClick={() => navigate("/")}
         >
           <img
@@ -81,7 +83,8 @@ const NavBar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className={`navbar-toggler-icon ${
+        dark && "navbar-dark "}`}></span>
         </button>
         <div className="collapse navbar-collapse order-lg-1" id="navMenu">
           <ul className="navbar-nav mx-auto text-center">
@@ -159,7 +162,7 @@ const NavBar = () => {
             </li>
             <li className="nav-item">
               <button
-                onClick={darkChange}
+                onClick={()=>{    dispatch(changeDark())}}
                 className={`nav-link ${!dark ? "login" : "loginDark"}`}
               >
                 {dark === true ? (

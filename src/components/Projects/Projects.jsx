@@ -89,7 +89,7 @@ const Projects = () => {
                             className="px-3 py-2"
                           >
                             <a
-                              href={`https://smou-alasala-server-ap-qy3u2378d-mo74806.vercel.app/${project.parsure}`}
+                              href={`${project.parsure}`}
                               className="text-decoration-none text-black"
                             >
                               {lang === "english"

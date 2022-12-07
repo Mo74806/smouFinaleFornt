@@ -34,62 +34,58 @@
 #h3 {
   color: white;
   text-shadow: 4px 3px 0px #000, 9px 8px 0px rgb(0 0 0 / 15%);
-
-  font-weight: 600;
-  font-size: 60px;
+width:100%;
+  font-weight: bold;
+  font-size: 70px;
   font-family: "Cairo", sans-serif !important;
-  left: 60%;
-  position: absolute;
-  width: 30%;
+ text-align:end;
+ padding:5px 50px;
+  display:flex;
+  justify-content:center;
+ 
 }
 #h3e {
   color: white;
   text-shadow: 4px 0px 0px #000, 2px 0px 0px rgb(0 0 0 / 8%);
-
-
-  font-weight: 600;
+  font-weight: bold;
   font-size: 70px;
   font-family: "Cairo", sans-serif !important;
-  left: 5%;
-  position: absolute;
-  width: 50%;
-  top: 10%;
-
+ text-align:end;
+ 
+ padding:5px 50px;
+ display:flex;
+  justify-content:center;
 }
 
 #p_slider {
+width:100%;
   color: white;
-  left: 60%;
-  top: 30%;
-  position: absolute;
+  display:flex;
+  position:relative;
+  top:50%;
+  justify-content:center;
   font-weight: 800;
-  font-size: 30px;
+  font-size: 3rem;
   font-family: "Cairo", sans-serif !important;
 
-  padding: 20px;
+
 }
 #p_slidere {
   color: white;
-
-
-  left: 20%;
-  top: 30%;
-  position: absolute;
+width:100%;
+  color: white;
+  display:flex;
+  position:relative;
+  top:50%;
+  justify-content:center;
   font-weight: 800;
-  font-size: 50px;
+  font-size: 3rem;
   font-family: "Cairo", sans-serif !important;
 
-  padding: 20px;
+
 }
 @media (max-width: 1024px) {
-  #p_slider {
-    font-size: 40px;
-    top: 50%;
-  }
-  #p_slidere {
-    font-size: 40px;
-    top: 50%;
-  }
+ 
   #h3 {
     color: white;
     font-size: 60px;
@@ -110,15 +106,7 @@
   }
 }
 @media (max-width: 768px) {
-  #p_slider {
-    font-size: 25px;
-    top: 40%;
-  }
-  #p_slidere {
-    font-size: 25px;
-    top: 40%;
-    left: 10%;
-  }
+ 
   #h3 {
     color: white;
     font-size: 50px;
@@ -140,15 +128,7 @@
 }
 
 @media (max-width: 425px) {
-  #p_slider {
-    font-size: 20px;
-    top: 40%;
-  }
-  #p_slidere {
-    font-size: 25px;
-    top: 50%;
-    left: 10%;
-  }
+  
   #h3 {
     color: white;
     font-size: 40px;

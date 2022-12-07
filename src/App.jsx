@@ -43,13 +43,13 @@ function App() {
   });
 
   return (
-    <Fragment>
+    <Fragment className="m-0 p-0">
       <div
-        className={
+        className={`my-0 py-0  ${
           lang === "english"
             ? `english ${dark && "bg-dark text-light"}`
             : dark && "bg-dark text-light"
-        }
+        }`}
       >
         <NavBar />
         <Routes>

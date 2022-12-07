@@ -7,9 +7,10 @@ import { animateScroll as scroll } from "react-scroll";
 import { useEffect } from "react";
 
 const Home = () => {
+
   useEffect(() => {
     scroll.scrollToTop();
-  });
+  },[]);
 
   return (
     <Fragment>

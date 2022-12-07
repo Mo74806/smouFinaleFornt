@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-
+import { animateScroll as scroll } from "react-scroll";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { CenterFocusStrong, Dangerous } from "@mui/icons-material";
@@ -21,7 +21,9 @@ export default function AppointementForm() {
   const [logged, setLogged] = useState(
     JSON.parse(localStorage.getItem("isLoggedIn"))
   );
-
+    useEffect(() => {
+    scroll.scrollToTop();
+  },[]);
   useEffect(() => {
     setLogged(JSON.parse(localStorage.getItem("isLoggedIn")));
   }, []);
@@ -131,12 +133,12 @@ export default function AppointementForm() {
   };
 
   return (
-    <div className="contact-form-form-section  m-0 p-0   ">
+    <div className="contact-form-form-section row  m-0 p-0   ">
       <div>
         <Toaster />
       </div>
       <div className=" mask" style={{ backgroundColor: "rgba(0, 0, 0, 0.85)" }}>
-        <div className="   row ">
+        <div className="    ">
           <div action="" className="row   hstack justify-centent-center">
             <div className="row d-flex align-items-center  justify-content-center justify-content-xl-start   mx-xl-5 mx-auto py-5">
               <div
@@ -192,13 +194,13 @@ export default function AppointementForm() {
                           : "من فضلك سجل دخول بحسابك لتسطيع حجز موعد"}
                       </p>
                     </div>
-                    <div className="col-5 nav-item px-2 border border-0 py-2">
-                      <button onClick={signUpHandler}>
+                    <div className="col-5 btn nav-item px-2 border border-0 py-2">
+                      <button className="col-12" onClick={signUpHandler}>
                         {lang === "english" ? "Creat account" : "انشاء حساب"}
                       </button>
                     </div>
-                    <div className="col-5 nav-item p-2 border border-0">
-                      <button onClick={loginHandler}>
+                    <div className="col-5 btn nav-item p-2 border border-0">
+                      <button className="col-12" onClick={loginHandler}>
                         {lang === "english" ? "Login" : "الدخول"}
                       </button>
                     </div>
