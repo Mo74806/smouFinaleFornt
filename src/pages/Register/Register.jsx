@@ -49,7 +49,7 @@ const Input = styled.input`
   border: 0px;
   font-weight: bold;
   padding: 10px 30px;
-  margin-botton: 5px;
+  margin-bottom: 5px;
 `;
 const Button = styled.button`
   width: 40%;
@@ -66,7 +66,7 @@ const Button = styled.button`
     border: 1px solid var(--main-color);
     background-color: #fff;
     color: var(--main-color);
-    border-raduis: 25px;
+    border-radius: 25px;
   }
 `;
 const Error = styled.span`
@@ -230,6 +230,7 @@ const Register = () => {
           email: e.target.value,
         });
       }
+      console.log("hello from email");
     }
 
     // Password Validation
@@ -339,21 +340,11 @@ const Register = () => {
   };
 
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user.user);
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const [target, setTarget] = useState(null);
-
-  useEffect(() => {
-    setTarget(location.state.prevPath);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user]);
 
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(addUser(newUser)).then((res) => {
-      localStorage.setItem("user", JSON.stringify(res.payload.user));
       navigate("/");
     });
   };

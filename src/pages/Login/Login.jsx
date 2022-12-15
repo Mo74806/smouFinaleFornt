@@ -53,7 +53,7 @@ const Input = styled.input`
   border: 0px;
   font-weight: bold;
   padding: 10px 30px;
-  margin-botton: 5px;
+  margin-bottom: 5px;
 `;
 const FormLink = styled.a`
   font-size: 12px;
@@ -68,17 +68,18 @@ const Button = styled.button`
   border: 1px solid white;
   padding: 12px 17px;
 
-border-radius:25px;
+  border-radius: 25px;
   background-color: var(--main-color);
   color: white;
   cursor: pointer;
   white-space: nowrap;
   transition: all ease 0.25s;
   &:hover {
-    border: 1px solid var(--main-color) ;
+    border: 1px solid var(--main-color);
     background-color: #fff;
     color: var(--main-color);
-      border-raduis:25px;
+    border-radius: 25px;
+  }
 `;
 
 const Error = styled.span`
@@ -106,32 +107,33 @@ const Login = (props) => {
   };
   const [target, setTarget] = useState(null);
   useEffect(() => {
-    setTarget(location.state.prevPath);
+    location.state && setTarget(location.state.prevPath);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(signIn(inputUser)).then((res) => {
-      if (target === "/admin") {
-        if (res.payload.user.role === "admin") {
-          navigate(`${target}`);
-        } else {
-          lang === "english"
-            ? setAdminonlyError("Admin Dashboard can only accessed by admins")
-            : setAdminonlyError("هذا الجزء مخصص للإدارة فقط");
-        }
-      } else {
-        if (res.payload.user) {
-          localStorage.setItem("user", JSON.stringify(res.payload.user));
-          if (target === "/forgotPass") {
-            navigate("/");
+    dispatch(signIn(inputUser))
+      .then((res) => {
+        if (target === "/admin" || location.pathname === "/admin") {
+          if (res.payload.user.role === "admin") {
+            navigate(`/admin`);
           } else {
-            navigate(`${target}`);
+            lang === "english"
+              ? setAdminonlyError("Admin Dashboard can only accessed by admins")
+              : setAdminonlyError("هذا الجزء مخصص للإدارة فقط");
+          }
+        } else {
+          if (res.payload.user) {
+            if (target === "/forgotPass") {
+              navigate("/");
+            } else {
+              navigate(`${target}`);
+            }
           }
         }
-      }
-    });
+      })
+      .catch((error) => console.log(error));
   };
 
   const signUpHandler = () => {

@@ -6,11 +6,10 @@ export default class Circle extends Component {
     let { title, page, classs } = this.props;
 
     return (
-      <div className="col row  text-center  m-0 my-3 p-0" id="circle">
+      <div className="col m-2" id="circle">
         <a href={page}>
           <svg
-            className={`${classs}  ` }
-
+            className={`${classs}  `}
             width="140"
             height="140"
             xmlns="http://www.w3.org/2000/svg"

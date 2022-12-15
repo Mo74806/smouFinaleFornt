@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import "./cards.css";
-
 import { cards } from "../../../aboutData";
 import Card from "./Card";
 import { useSelector } from "react-redux";
@@ -24,7 +23,7 @@ export default function CardS() {
         data-animation="slide-right"
       >
         {" "}
-        <h2 className=" mt-5 px-3 row d-flex align-items-start justify-content-start">
+        <h2 className="mt-5 px-3 row d-flex align-items-start justify-content-start">
           <span>
             <img
               className="quote1"
@@ -37,16 +36,16 @@ export default function CardS() {
             {lang === "english" ? "Values" : "قيمتنا"}
           </span>
         </h2>{" "}
-        <div className="row d-flex my-5 py-xl-5 px-xl-5 justify-content-center">
-        {cards.map((cards) => (
-          <Card
-            className={`${dark && "bg-dark"}`}
-            key={cards.id}
-            title={lang === "english" ? cards.titleEN : cards.title}
-            des={lang === "english" ? cards.desEN : cards.des}
-          />
-        ))}
-      </div>
+        <div className="row d-flex py-xl-5 px-xl-5 justify-content-center">
+          {cards.map((cards) => (
+            <Card
+              className={`${dark && "bg-dark"}`}
+              key={cards.id}
+              title={lang === "english" ? cards.titleEN : cards.title}
+              des={lang === "english" ? cards.desEN : cards.des}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

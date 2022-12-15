@@ -21,9 +21,10 @@ export default function AppointementForm() {
   const [logged, setLogged] = useState(
     JSON.parse(localStorage.getItem("isLoggedIn"))
   );
-    useEffect(() => {
+  useEffect(() => {
     scroll.scrollToTop();
-  },[]);
+  }, []);
+
   useEffect(() => {
     setLogged(JSON.parse(localStorage.getItem("isLoggedIn")));
   }, []);

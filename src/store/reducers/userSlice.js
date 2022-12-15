@@ -9,6 +9,7 @@ export const addUser = createAsyncThunk(
       const res = await publicRequest.post(`/users/signup`, user);
       localStorage.setItem("jwt", res.data.token);
       localStorage.setItem("isLoggedIn", true);
+      localStorage.setItem("user", JSON.stringify(res.data.data));
       window.dispatchEvent(new Event("storage"));
       return res.data.data;
     } catch (error) {
@@ -24,6 +25,7 @@ export const signIn = createAsyncThunk(
       const res = await publicRequest.post(`/users/login`, user);
       localStorage.setItem("jwt", res.data.token);
       localStorage.setItem("isLoggedIn", true);
+      localStorage.setItem("user", JSON.stringify(res.data.data));
       window.dispatchEvent(new Event("storage"));
       return res.data.data;
     } catch (error) {
