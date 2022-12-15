@@ -33,23 +33,28 @@ function App() {
   const [logged, setLogged] = useState(
     JSON.parse(localStorage.getItem("isLoggedIn"))
   );
+  const [localUser, setLocalUser] = useState(
+    JSON.parse(localStorage.getItem("user"))
+  );
 
   useEffect(() => {
     setLogged(JSON.parse(localStorage.getItem("isLoggedIn")));
+    setLocalUser(JSON.parse(localStorage.getItem("user")));
   }, []);
 
-  window.addEventListener("storage", function () {
+  window.addEventListener("storage", async function () {
     setLogged(JSON.parse(localStorage.getItem("isLoggedIn")));
+    await setLocalUser(JSON.parse(localStorage.getItem("user")));
   });
 
   return (
-    <Fragment className="m-0 p-0">
+    <Fragment>
       <div
-        className={`my-0 py-0  ${
+        className={
           lang === "english"
-            ? `english ${dark && "bg-dark text-light"}`
-            : dark && "bg-dark text-light"
-        }`}
+            ? `english ${dark ? "bg-dark text-light" : ""}`
+            : `${dark ? "bg-dark text-light" : ""}`
+        }
       >
         <NavBar />
         <Routes>
@@ -61,7 +66,18 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/forgotPass" element={<ForgetPass />} />
 
-          {<Route path="/admin" element={logged ? <HomeAdmin /> : <Login />} />}
+          {
+            <Route
+              path="/admin"
+              element={
+                localUser && localUser.user.role === "admin" ? (
+                  <HomeAdmin />
+                ) : (
+                  <Login />
+                )
+              }
+            />
+          }
           <Route path="/AdminUsers" element={<UserList />} />
           <Route path="/AdminUser/:id" element={<User />} />
 

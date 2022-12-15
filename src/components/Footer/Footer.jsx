@@ -8,31 +8,23 @@ import "./Footer.css";
 const Footer = () => {
   const { lang } = useSelector((state) => state.language);
   const { dark } = useSelector((state) => state.dark);
-  const { user } = useSelector((state) => state.user);
-  let [adminonlyError, setAdminonlyError] = useState(null);
 
-  useEffect(() => {
-    setLogged(JSON.parse(localStorage.getItem("isLoggedIn")));
-  }, []);
-
-  const [logged, setLogged] = useState(
-    JSON.parse(localStorage.getItem("isLoggedIn"))
+  const [localUser, setLocalUser] = useState(
+    JSON.parse(localStorage.getItem("user"))
   );
 
-  window.addEventListener("storage", function () {
-    setLogged(JSON.parse(localStorage.getItem("isLoggedIn")));
+  useEffect(() => {
+    setLocalUser(JSON.parse(localStorage.getItem("user")));
+  }, []);
+  window.addEventListener("storage", async function () {
+    await setLocalUser(JSON.parse(localStorage.getItem("user")));
   });
+
+  console.log(localUser);
 
   const navigate = useNavigate();
   const adminClickHandle = () => {
-    if (logged && user.user.role === "admin") {
-      navigate("/admin");
-    } else {
-      navigate("/login", {
-        state: { prevPath: "/admin" },
-        replace: true,
-      });
-    }
+    navigate("/admin");
   };
 
   return (
@@ -50,7 +42,7 @@ const Footer = () => {
               <img
                 className="footer-logo"
                 src="./imgs/logo/شعار سمو الاصالة ابيض.png"
-                alt="logo"
+                alt=""
               />
             </a>
           </div>
@@ -133,16 +125,18 @@ const Footer = () => {
                 </span>
                 <span className="order-0"> +954-578-254 </span>
               </div>
-              <div
-                onClick={adminClickHandle}
-                id="footer-admin"
-                className="d-flex justify-content-center my-2 footer-text"
-              >
-                <span className="mx-2 order-1">
-                  <i class="fa-sharp fa-solid fa-lock footer-icon"></i>
-                </span>
-                <span className="order-0"> Admin Dashboard </span>
-              </div>
+              {localUser && localUser.user.role === "admin" && (
+                <div
+                  onClick={adminClickHandle}
+                  id="footer-admin"
+                  className="d-flex justify-content-center my-2 footer-text"
+                >
+                  <span className="mx-2 order-1">
+                    <i class="fa-sharp fa-solid fa-lock footer-icon"></i>
+                  </span>
+                  <span className="order-0"> Admin Dashboard </span>
+                </div>
+              )}
             </div>
           </div>
         </div>

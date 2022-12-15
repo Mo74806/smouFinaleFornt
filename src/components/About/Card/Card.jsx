@@ -11,9 +11,9 @@ export default class Card extends Component {
           className="card-img-top"
           alt="wallpaper"
         />
-        <div className="card-body card-body-about p-0 ">
-          <h5 className="card-title card-title-about my-auto m-0 p-0"> {title}</h5>
-          <p className="card-text hide card-text-about mt-3  " dir="rtl">
+        <div className="card-body card-body-about p-2 ">
+          <h5 className="card-title card-title-about"> {title}</h5>
+          <p className="card-text hide card-text-about" dir="rtl">
             {des}
           </p>
         </div>

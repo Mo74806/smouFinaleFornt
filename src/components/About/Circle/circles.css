@@ -1,45 +1,15 @@
 .row-three {
-  margin-top: 100px !important;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  
   background: linear-gradient(to top, #1d709d42, #8e7e716a),
     url("../../../../public/imgs/about/wallpaper2.jpg");
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
   border-radius: 10px;
-
-
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   box-shadow: 5px 5px 5px #1d709d5e;
 }
-.row-threeDark {
-  margin-top: 100px !important;
-  padding-top: 20px;
-  padding-bottom: 20px;
-
-  background: linear-gradient(to top, #0c2f42bd, #4e453e9d),
-    url("../../../../public/imgs/about/wallpaper2.jpg");
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-
-  justify-content: center;
-  box-shadow: 5px 5px 5px #1d709d5e;
-}
-
-.marketing .col-lg-4 {
-  margin-bottom: 2rem;
-  margin-top: 4rem;
-  text-align: center;
-}
-.marketing h2 {
-  font-weight: 400;
-}
-
-
 .value-text {
   position: absolute;
   left: 0px;
@@ -110,5 +80,6 @@ svg:hover {
 .rect-feture {
   transform: scale(2);
 }
-
-
+#circle {
+  text-align: center;
+}

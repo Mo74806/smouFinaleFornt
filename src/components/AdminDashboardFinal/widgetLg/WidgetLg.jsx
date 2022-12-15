@@ -21,7 +21,7 @@ export default function WidgetLg() {
   });
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getDayAppointments([`2022-11-30`, jwt])).then((res) =>
+    dispatch(getDayAppointments([`${year}-${month}-${day}`, jwt])).then((res) =>
       res.payload.dayAppointements.forEach((appointment) =>
         dispatch(getUserById([appointment.user, jwt])).then((res) =>
           setUserList((prev) => [...prev, res.payload])
